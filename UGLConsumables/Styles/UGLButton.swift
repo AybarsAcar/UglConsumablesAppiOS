@@ -16,7 +16,7 @@ struct PressableButtonStyle: ButtonStyle {
   
   func makeBody(configuration: Configuration) -> some View {
     configuration.label
-      .opacity(configuration.isPressed ? 0.8 : 1.0)
+      .opacity(configuration.isPressed ? 1.0 : 1.0)
       .brightness(configuration.isPressed ? 0.05 : 0)
       .scaleEffect(configuration.isPressed ? scaleAmount : 1.0)
   }

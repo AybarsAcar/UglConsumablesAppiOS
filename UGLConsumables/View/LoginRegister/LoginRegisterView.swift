@@ -11,16 +11,13 @@ import SwiftUI
 struct LoginRegisterView: View {
   
   @Environment(\.colorScheme) var colorScheme
+  @AppStorage("isLightTheme") private var isLightTheme: Bool = true
+
 
   @State private var email: String = ""
   @State private var password: String = ""
   
-  @FocusState private var emailFieldIsFocused: Bool
-  @FocusState private var passwordFieldIsFocused: Bool
-  
-  @State private var selectedCard: CardState = .login
-  @Namespace private var cardState
-  
+  @State private var isSignupPageDisplayed: Bool = false
   
   var body: some View {
     ZStack {
@@ -36,6 +33,17 @@ struct LoginRegisterView: View {
       
       
       VStack {
+        HStack {
+          Spacer()
+          Button(action: {
+            isLightTheme.toggle()
+          }) {
+            Image(systemName: isLightTheme ? "sun.min.fill" : "moon.fill")
+              .font(.title)
+              .foregroundColor(.white)
+              .padding()
+          }
+        }
         
         Spacer()
         
@@ -46,72 +54,19 @@ struct LoginRegisterView: View {
           .scaledToFit()
           .frame(width: 200, height: 200)
         
+        
+        loginView
+          .padding()
+        
         Spacer()
         
-        VStack {
-          
-          HStack(spacing: 40) {
-            ZStack {
-              Text("Login")
-                .font(.title2)
-              
-              if selectedCard == .login {
-                RoundedRectangle(cornerRadius: 10)
-                  .fill(.orange)
-                  .matchedGeometryEffect(id: "cardState", in: cardState)
-                  .frame(width: 40, height: 4)
-                  .offset(y: 20)
-              }
-            }
-            .padding()
-            .onTapGesture {
-              withAnimation(.spring()) {
-                selectedCard = .login
-              }
-            }
-            
-            
-            ZStack {
-              Text("Register")
-                .font(.title2)
-              
-              if selectedCard == .register {
-                RoundedRectangle(cornerRadius: 10)
-                  .fill(.orange)
-                  .matchedGeometryEffect(id: "cardState", in: cardState)
-                  .frame(width: 40, height: 4)
-                  .offset(y: 20)
-              }
-            }
-            .padding()
-            .onTapGesture {
-              withAnimation(.spring()) {
-                selectedCard = .register
-              }
-            }
-          }
-          
-          if selectedCard == .login {
-            loginView
-              .transition(.move(edge: .leading))
-          }
-          
-          if selectedCard == .register {
-            VStack {
-              registerView
-                .transition(.move(edge: .trailing))
-            }
-          }
-          
-          Spacer(minLength: 50)
-        }
-        .background(Color.theme.surface)
-        .cornerRadius(40)
-        .frame(height: 500)
-        .shadow(color: .black.opacity(0.4), radius: 10, x: 0, y: 10)
-        .padding()
+        Text("All Rights Reserved © Aybars Acar")
+          .font(.footnote)
+          .foregroundColor(.secondary)
       }
-      .ignoresSafeArea()
+      .sheet(isPresented: $isSignupPageDisplayed) {
+        registerView
+      }
     }
     .onTapGesture {
       UIApplication.shared.endEditing()
@@ -133,86 +88,84 @@ struct LoginRegisterView_Previews: PreviewProvider {
 extension LoginRegisterView {
   
   private var loginView: some View {
-    VStack(spacing: 20) {
-      
-      HStack {
-        Image(systemName: emailFieldIsFocused ? "person.fill" : "person")
-          .foregroundColor(emailFieldIsFocused ? .theme.blue : .secondary)
+      VStack(spacing: 20) {
         
-        TextField("Email", text: $email)
-          .textInputAutocapitalization(.never)
-          .focused($emailFieldIsFocused)
-          .padding()
-      }
-      .overlay {
-        Rectangle()
-          .fill(emailFieldIsFocused ? Color.theme.blue : .secondary)
-          .frame(height: 2)
-          .padding(.top, 60)
-      }
-            
-      
-      HStack {
-        Image(systemName: passwordFieldIsFocused ? "key.fill" : "key")
-          .foregroundColor(passwordFieldIsFocused ? .theme.blue : .secondary)
+        Text("Welcome back")
+          .font(.title2)
+          .fontWeight(.semibold)
         
-        SecureField("Password", text: $password)
-          .focused($passwordFieldIsFocused)
-          .padding()
+        UnderlinedTextField(
+          text: $email,
+          activeIcon: "person.fill",
+          defaultIcon: "person",
+          placeholder: "Email"
+        )
+              
+        UnderlinedTextField(
+          text: $password,
+          activeIcon: "key.fill",
+          defaultIcon: "key",
+          placeholder: "Password"
+        )
         
-        Image(systemName: "lock")
-          .foregroundColor(.secondary)
+        
+        HStack {
+          Spacer()
+          Text("Forgot Password?")
+            .font(.footnote)
+            .foregroundColor(.secondary)
+            .padding()
+            .onTapGesture {
+              isSignupPageDisplayed.toggle()
+            }
+        }
+        
+        Button(action: {}) {
+          Text("Login".uppercased())
+            .blockCapsuleButtonStyle()
+            .padding(.horizontal)
+        }
+        .buttonStyle(.withPressableButtonStyle)
+        .offset(y: 40)
       }
-      .overlay {
-        Rectangle()
-          .fill(passwordFieldIsFocused ? Color.theme.blue : .secondary)
-          .frame(height: 2)
-          .padding(.top, 60)
-      }
-     
-      
-      Spacer()
-      
-      Button(action: {}) {
-        Text("Login".uppercased())
-          .blockCapsuleButtonStyle()
-      }
-      .buttonStyle(.withPressableButtonStyle)
-      
-      HStack {
-        Spacer()
-        Text("Forgot Password?")
-          .font(.footnote)
-          .foregroundColor(.secondary)
-          .padding()
-          .onTapGesture {
-            
-          }
-      }
-      
-      Spacer()
-    }
-    .frame(maxWidth: .infinity)
-    .padding()
+      .padding()
+      .background(
+        RoundedRectangle(cornerRadius: 12)
+          .fill(Color.theme.surface)
+      )
+      .shadow(color: .black.opacity(0.4), radius: 20, x: 0, y: 20)
   }
   
   private var registerView: some View {
     VStack {
       
-      HStack {
-        Image(systemName: "person")
-        TextField("Username", text: $email)
-          .padding()
-      }
+      UnderlinedTextField(
+        text: $email,
+        activeIcon: "person.fill",
+        defaultIcon: "person",
+        placeholder: "Username"
+      )
       
-      TextField("Email", text: $email)
-        .padding()
+      UnderlinedTextField(
+        text: $email,
+        activeIcon: "person.fill",
+        defaultIcon: "person",
+        placeholder: "Email"
+      )
       
-      SecureField("Password", text: $password)
-        .padding()
+      UnderlinedTextField(
+        text: $password,
+        activeIcon: "key.fill",
+        defaultIcon: "key",
+        placeholder: "Password"
+      )
       
-      SecureField("Confirm Password", text: $password)
-        .padding()
+      UnderlinedTextField(
+        text: $password,
+        activeIcon: "key.fill",
+        defaultIcon: "key",
+        placeholder: "Confirm Password"
+      )
       
       Spacer()
       
@@ -221,10 +174,7 @@ extension LoginRegisterView {
           .blockCapsuleButtonStyle()
       }
       .buttonStyle(.withPressableButtonStyle)
-      
-      Spacer()
     }
-    .frame(maxWidth: .infinity)
     .padding()
   }
   
