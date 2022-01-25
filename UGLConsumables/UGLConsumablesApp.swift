@@ -14,7 +14,7 @@ struct UGLConsumablesApp: App {
   
   var body: some Scene {
     WindowGroup {
-      LoginRegisterView()
+      LoginRegisterScreen()
         .preferredColorScheme(isLightTheme ? .light : .dark)
     }
   }

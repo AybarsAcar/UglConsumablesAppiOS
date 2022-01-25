@@ -12,9 +12,15 @@
 		00316680279BB387001EFFD6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0031667F279BB387001EFFD6 /* Preview Assets.xcassets */; };
 		0031668B279BB6B3001EFFD6 /* AccountDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0031668A279BB6B3001EFFD6 /* AccountDto.swift */; };
 		0031668D279BB766001EFFD6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0031668C279BB766001EFFD6 /* User.swift */; };
-		00316693279BB7FA001EFFD6 /* LoginRegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00316692279BB7FA001EFFD6 /* LoginRegisterView.swift */; };
+		00316693279BB7FA001EFFD6 /* LoginRegisterScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00316692279BB7FA001EFFD6 /* LoginRegisterScreen.swift */; };
 		00316696279BB88D001EFFD6 /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00316695279BB88D001EFFD6 /* Color+Extensions.swift */; };
 		0049802B279D296E00C43555 /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049802A279D296E00C43555 /* View+Extensions.swift */; };
+		008CA09E279FF28800EECF84 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008CA09D279FF28800EECF84 /* LoginView.swift */; };
+		008CA0A0279FF32200EECF84 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008CA09F279FF32200EECF84 /* RegisterView.swift */; };
+		008CA0A2279FF7F900EECF84 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008CA0A1279FF7F900EECF84 /* LoginViewModel.swift */; };
+		008CA0A4279FF85A00EECF84 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008CA0A3279FF85A00EECF84 /* RegisterViewModel.swift */; };
+		008CA0A8279FF95D00EECF84 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008CA0A7279FF95D00EECF84 /* UserService.swift */; };
+		008CA0AA279FF97000EECF84 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008CA0A9279FF97000EECF84 /* UserRepository.swift */; };
 		00A25BAF279D2CD500DF553F /* UGLButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A25BAE279D2CD500DF553F /* UGLButton.swift */; };
 		00A25BB1279D303900DF553F /* UIApplication+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A25BB0279D303900DF553F /* UIApplication+Extensions.swift */; };
 		00B9A88C279EA10B00842850 /* SlidingTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B9A88B279EA10B00842850 /* SlidingTabView.swift */; };
@@ -28,9 +34,15 @@
 		0031667F279BB387001EFFD6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0031668A279BB6B3001EFFD6 /* AccountDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountDto.swift; sourceTree = "<group>"; };
 		0031668C279BB766001EFFD6 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		00316692279BB7FA001EFFD6 /* LoginRegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRegisterView.swift; sourceTree = "<group>"; };
+		00316692279BB7FA001EFFD6 /* LoginRegisterScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRegisterScreen.swift; sourceTree = "<group>"; };
 		00316695279BB88D001EFFD6 /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
 		0049802A279D296E00C43555 /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
+		008CA09D279FF28800EECF84 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		008CA09F279FF32200EECF84 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		008CA0A1279FF7F900EECF84 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		008CA0A3279FF85A00EECF84 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
+		008CA0A7279FF95D00EECF84 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		008CA0A9279FF97000EECF84 /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
 		00A25BAE279D2CD500DF553F /* UGLButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UGLButton.swift; sourceTree = "<group>"; };
 		00A25BB0279D303900DF553F /* UIApplication+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extensions.swift"; sourceTree = "<group>"; };
 		00B9A88B279EA10B00842850 /* SlidingTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlidingTabView.swift; sourceTree = "<group>"; };
@@ -67,13 +79,13 @@
 		00316677279BB386001EFFD6 /* UGLConsumables */ = {
 			isa = PBXGroup;
 			children = (
-				00A25BAD279D2CC500DF553F /* Styles */,
-				00316694279BB855001EFFD6 /* Extensions */,
 				00316678279BB386001EFFD6 /* UGLConsumablesApp.swift */,
 				0031667C279BB387001EFFD6 /* Assets.xcassets */,
 				00316686279BB66E001EFFD6 /* Domain */,
+				00316694279BB855001EFFD6 /* Extensions */,
 				0031667E279BB387001EFFD6 /* Preview Content */,
 				00316688279BB695001EFFD6 /* Remote */,
+				00A25BAD279D2CC500DF553F /* Styles */,
 				0031668E279BB7C5001EFFD6 /* View */,
 			);
 			path = UGLConsumables;
@@ -90,6 +102,7 @@
 		00316686279BB66E001EFFD6 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				008CA0A5279FF8E500EECF84 /* Repositories */,
 				00316687279BB673001EFFD6 /* Models */,
 			);
 			path = Domain;
@@ -106,6 +119,7 @@
 		00316688279BB695001EFFD6 /* Remote */ = {
 			isa = PBXGroup;
 			children = (
+				008CA0A6279FF93800EECF84 /* Services */,
 				00316689279BB699001EFFD6 /* DTOs */,
 			);
 			path = Remote;
@@ -122,8 +136,8 @@
 		0031668E279BB7C5001EFFD6 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				00B9A88A279EA10000842850 /* Utils */,
 				0031668F279BB7D1001EFFD6 /* LoginRegister */,
+				00B9A88A279EA10000842850 /* Utils */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -131,8 +145,11 @@
 		0031668F279BB7D1001EFFD6 /* LoginRegister */ = {
 			isa = PBXGroup;
 			children = (
+				00316692279BB7FA001EFFD6 /* LoginRegisterScreen.swift */,
+				008CA09D279FF28800EECF84 /* LoginView.swift */,
+				008CA09F279FF32200EECF84 /* RegisterView.swift */,
 				00B9A88D279EA4AF00842850 /* Components */,
-				00316692279BB7FA001EFFD6 /* LoginRegisterView.swift */,
+				008CA09C279FF21000EECF84 /* ViewModels */,
 			);
 			path = LoginRegister;
 			sourceTree = "<group>";
@@ -145,6 +162,31 @@
 				00A25BB0279D303900DF553F /* UIApplication+Extensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		008CA09C279FF21000EECF84 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				008CA0A1279FF7F900EECF84 /* LoginViewModel.swift */,
+				008CA0A3279FF85A00EECF84 /* RegisterViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		008CA0A5279FF8E500EECF84 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				008CA0A9279FF97000EECF84 /* UserRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		008CA0A6279FF93800EECF84 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				008CA0A7279FF95D00EECF84 /* UserService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		00A25BAD279D2CC500DF553F /* Styles */ = {
@@ -249,7 +291,13 @@
 				00B9A88F279EA4E300842850 /* UnderlinedTextField.swift in Sources */,
 				0049802B279D296E00C43555 /* View+Extensions.swift in Sources */,
 				00A25BB1279D303900DF553F /* UIApplication+Extensions.swift in Sources */,
-				00316693279BB7FA001EFFD6 /* LoginRegisterView.swift in Sources */,
+				008CA0A2279FF7F900EECF84 /* LoginViewModel.swift in Sources */,
+				008CA0A4279FF85A00EECF84 /* RegisterViewModel.swift in Sources */,
+				008CA09E279FF28800EECF84 /* LoginView.swift in Sources */,
+				008CA0A8279FF95D00EECF84 /* UserService.swift in Sources */,
+				008CA0A0279FF32200EECF84 /* RegisterView.swift in Sources */,
+				00316693279BB7FA001EFFD6 /* LoginRegisterScreen.swift in Sources */,
+				008CA0AA279FF97000EECF84 /* UserRepository.swift in Sources */,
 				00B9A88C279EA10B00842850 /* SlidingTabView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
