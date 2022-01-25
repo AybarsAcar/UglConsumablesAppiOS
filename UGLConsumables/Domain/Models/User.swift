@@ -12,5 +12,5 @@ struct User {
   let username: String
   let email: String
   let token: String
-  let department: String
+  let department: String?
 }

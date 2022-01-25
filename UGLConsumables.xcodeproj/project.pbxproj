@@ -21,6 +21,7 @@
 		008CA0A4279FF85A00EECF84 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008CA0A3279FF85A00EECF84 /* RegisterViewModel.swift */; };
 		008CA0A8279FF95D00EECF84 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008CA0A7279FF95D00EECF84 /* UserService.swift */; };
 		008CA0AA279FF97000EECF84 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008CA0A9279FF97000EECF84 /* UserRepository.swift */; };
+		008CA0AC279FFADF00EECF84 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008CA0AB279FFADF00EECF84 /* APIService.swift */; };
 		00A25BAF279D2CD500DF553F /* UGLButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A25BAE279D2CD500DF553F /* UGLButton.swift */; };
 		00A25BB1279D303900DF553F /* UIApplication+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A25BB0279D303900DF553F /* UIApplication+Extensions.swift */; };
 		00B9A88C279EA10B00842850 /* SlidingTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B9A88B279EA10B00842850 /* SlidingTabView.swift */; };
@@ -43,6 +44,7 @@
 		008CA0A3279FF85A00EECF84 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		008CA0A7279FF95D00EECF84 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		008CA0A9279FF97000EECF84 /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
+		008CA0AB279FFADF00EECF84 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		00A25BAE279D2CD500DF553F /* UGLButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UGLButton.swift; sourceTree = "<group>"; };
 		00A25BB0279D303900DF553F /* UIApplication+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extensions.swift"; sourceTree = "<group>"; };
 		00B9A88B279EA10B00842850 /* SlidingTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlidingTabView.swift; sourceTree = "<group>"; };
@@ -185,6 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				008CA0A7279FF95D00EECF84 /* UserService.swift */,
+				008CA0AB279FFADF00EECF84 /* APIService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -283,6 +286,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				008CA0AC279FFADF00EECF84 /* APIService.swift in Sources */,
 				00316696279BB88D001EFFD6 /* Color+Extensions.swift in Sources */,
 				0031668D279BB766001EFFD6 /* User.swift in Sources */,
 				00316679279BB386001EFFD6 /* UGLConsumablesApp.swift in Sources */,

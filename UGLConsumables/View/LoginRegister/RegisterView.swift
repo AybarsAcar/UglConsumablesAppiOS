@@ -63,7 +63,11 @@ struct RegisterView: View {
         placeholder: "Confirm Password"
       )
       
-      Button(action: {}) {
+      Button(action: {
+        Task {
+          await viewModel.signUp()
+        }
+      }) {
         Text("Register".uppercased())
           .blockCapsuleButtonStyle()
       }

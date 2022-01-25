@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct LoginView: View {
-  
+  @AppStorage("isLoggedIn") private var isLoggedIn: Bool = false
+
   @StateObject private var viewModel = LoginViewModel()
   let onClick: () -> Void
   
@@ -46,7 +47,11 @@ struct LoginView: View {
           }
       }
       
-      Button(action: {}) {
+      Button(action: {
+        Task {
+          await viewModel.login()
+        }
+      }) {
         Text("LOGIN")
           .blockCapsuleButtonStyle()
           .padding(.horizontal)

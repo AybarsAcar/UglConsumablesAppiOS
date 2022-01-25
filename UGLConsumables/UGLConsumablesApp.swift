@@ -11,11 +11,15 @@ import SwiftUI
 struct UGLConsumablesApp: App {
   
   @AppStorage("isLightTheme") private var isLightTheme: Bool = true
+  @AppStorage("token") private var token: String = ""
+  @AppStorage("isLoggedIn") private var isLoggedIn: Bool = false
   
   var body: some Scene {
     WindowGroup {
-      LoginRegisterScreen()
-        .preferredColorScheme(isLightTheme ? .light : .dark)
+      ZStack {
+        LoginRegisterScreen()
+          .preferredColorScheme(isLightTheme ? .light : .dark)
+      }
     }
   }
 }
