@@ -14,6 +14,7 @@ struct LoginRegisterScreen: View {
   @AppStorage("isLightTheme") private var isLightTheme: Bool = true
   
   @State private var isSignupPageDisplayed: Bool = false
+  @State private var errorMessage: String?
   
   var body: some View {
     ZStack {
@@ -51,7 +52,7 @@ struct LoginRegisterScreen: View {
           .frame(width: 200, height: 200)
         
         
-        LoginView{
+        LoginView(message: $errorMessage) {
           isSignupPageDisplayed.toggle()
         }
           .padding()
@@ -65,6 +66,16 @@ struct LoginRegisterScreen: View {
       .sheet(isPresented: $isSignupPageDisplayed) {
         RegisterView()
           .padding()
+      }
+      .overlay(alignment: .bottom) {
+        if let errorMessage = errorMessage {
+          SnackbarView(message: errorMessage, type: .error) {
+            withAnimation(.linear(duration: 0.2)) {
+              self.errorMessage = nil
+            }
+          }
+          .padding(.horizontal)
+        }
       }
     }
     .onTapGesture {

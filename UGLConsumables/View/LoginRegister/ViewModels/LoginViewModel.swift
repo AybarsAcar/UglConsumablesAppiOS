@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 
 class LoginViewModel: ObservableObject {
@@ -28,6 +29,7 @@ class LoginViewModel: ObservableObject {
   @MainActor
   func login() async {
     
+    showAlert = false
     isLoading.toggle()
     
     defer {
@@ -35,7 +37,11 @@ class LoginViewModel: ObservableObject {
     }
     
     do {
+      try await Task.sleep(nanoseconds: 2_000_000_000) // add 2 second delay
       user = try await _service.login(with: LoginAccountDetails(email: email, password: password))
+      
+      email = ""
+      password = ""
       
     } catch {
       print("ERROR\n\(error.localizedDescription)")
