@@ -10,6 +10,10 @@ import SwiftUI
 
 struct UnderlinedTextField: View {
   
+  enum UnderlinedTextFieldType {
+    case plain, secure
+  }
+  
   @Binding var text: String
   @FocusState var isFocused: Bool
   
@@ -18,6 +22,9 @@ struct UnderlinedTextField: View {
   let placeholder: String
   let activeColor: Color
   let defaultColor: Color
+  let type: UnderlinedTextFieldType
+  
+  @State private var secure: Bool = true
   
   init(
     text: Binding<String>,
@@ -25,7 +32,8 @@ struct UnderlinedTextField: View {
     defaultIcon: String,
     placeholder: String,
     activeColor: Color = .theme.blue,
-    defaultColor: Color = .secondary
+    defaultColor: Color = .secondary,
+    type: UnderlinedTextFieldType = .plain
   ) {
     self._text = text
     self.activeIcon = activeIcon
@@ -33,10 +41,25 @@ struct UnderlinedTextField: View {
     self.placeholder = placeholder
     self.activeColor = activeColor
     self.defaultColor = defaultColor
+    self.type = type
   }
   
   var body: some View {
     
+    switch type {
+    case .plain:
+      plainTextField
+      
+    case .secure:
+     secureTextField
+    }
+  }
+}
+
+
+extension UnderlinedTextField {
+  
+  private var plainTextField: some View {
     HStack {
       Image(systemName: isFocused ? activeIcon : defaultIcon)
         .foregroundColor(isFocused ? activeColor : defaultColor)
@@ -53,7 +76,43 @@ struct UnderlinedTextField: View {
         .padding(.top, 60)
     }
   }
+  
+  private var secureTextField: some View {
+    HStack {
+      Image(systemName: isFocused ? activeIcon : defaultIcon)
+        .foregroundColor(isFocused ? activeColor : defaultColor)
+      
+      if !secure {
+        
+        TextField(placeholder, text: $text)
+          .textInputAutocapitalization(.never)
+          .disableAutocorrection(true)
+          .focused($isFocused)
+          .padding()
+        
+      } else {
+        SecureField(placeholder, text: $text)
+          .textInputAutocapitalization(.never)
+          .disableAutocorrection(true)
+          .focused($isFocused)
+          .padding()
+      }
+      
+      Image(systemName: secure ? "eye.fill" : "eye.slash.fill")
+        .foregroundColor(.secondary)
+        .onTapGesture {
+          secure.toggle()
+        }
+    }
+    .overlay {
+      Rectangle()
+        .fill(isFocused ?  activeColor : defaultColor)
+        .frame(height: 2)
+        .padding(.top, 60)
+    }
+  }
 }
+
 
 
 struct UnderlinedTextField_Previews: PreviewProvider {

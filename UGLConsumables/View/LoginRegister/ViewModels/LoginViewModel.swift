@@ -29,6 +29,12 @@ class LoginViewModel: ObservableObject {
   @MainActor
   func login() async {
     
+    guard !email.isEmpty && !password.isEmpty else {
+      showAlert = true
+      errorMessage = "Please enter your email and password."
+      return
+    }
+    
     showAlert = false
     isLoading.toggle()
     

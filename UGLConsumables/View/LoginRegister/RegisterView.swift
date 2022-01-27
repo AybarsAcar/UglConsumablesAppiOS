@@ -53,14 +53,16 @@ struct RegisterView: View {
         text: $viewModel.password,
         activeIcon: "key.fill",
         defaultIcon: "key",
-        placeholder: "Password"
+        placeholder: "Password",
+        type: .secure
       )
       
       UnderlinedTextField(
         text: $viewModel.confirmPassword,
         activeIcon: "key.fill",
         defaultIcon: "key",
-        placeholder: "Confirm Password"
+        placeholder: "Confirm Password",
+        type: .secure
       )
       
       Button(action: {
@@ -68,9 +70,19 @@ struct RegisterView: View {
           await viewModel.signUp()
         }
       }) {
-        Text("Register".uppercased())
+        
+        Group{
+          if !viewModel.isLoading {
+            Text("Register".uppercased())
+          } else {
+            ProgressView()
+              .tint(.white)
+          }
+        }
           .blockCapsuleButtonStyle()
+          .padding(.horizontal)
       }
+      .disabled(viewModel.isLoading)
       .buttonStyle(.withPressableButtonStyle)
       .padding()
     }
@@ -83,6 +95,12 @@ struct RegisterView: View {
         },
       alignment: .topTrailing
     )
+    .overlay(alignment: .bottom) {
+      SnackbarView(isDisplayed: $viewModel.showAlert, message: viewModel.errorMessage, type: .error) {
+        viewModel.showAlert = false
+        viewModel.errorMessage = nil
+      }
+    }
   }
 }
 

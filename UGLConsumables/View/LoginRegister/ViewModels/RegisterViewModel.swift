@@ -20,6 +20,7 @@ class RegisterViewModel: ObservableObject {
   @Published var showAlert: Bool = false
   @Published var errorMessage: String? = nil
   
+  
   private let _service: UserService
   
   init() {
@@ -29,6 +30,12 @@ class RegisterViewModel: ObservableObject {
   
   @MainActor
   func signUp() async {
+    
+    guard !username.isEmpty && !email.isEmpty && !password.isEmpty && !confirmPassword.isEmpty else {
+      showAlert = true
+      errorMessage = "All fields are requierd to register an account."
+      return
+    }
     
     guard password == confirmPassword else {
       showAlert = true
@@ -44,9 +51,12 @@ class RegisterViewModel: ObservableObject {
     
     do {
       user = try await _service.signUp(with: RegisterAccountDetails(username: username, email: email, password: password))
-      if let user = user {
-        print(user.email)
-      }
+      
+      username = ""
+      email = ""
+      password = ""
+      confirmPassword = ""
+      
     } catch {
       print("ERROR\n\(error.localizedDescription)")
       showAlert = true

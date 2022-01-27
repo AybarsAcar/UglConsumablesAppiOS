@@ -16,6 +16,10 @@ struct LoginRegisterScreen: View {
   @State private var isSignupPageDisplayed: Bool = false
   @State private var errorMessage: String?
   
+  @AppStorage("isLoggedIn") private var isLoggedIn: Bool = false
+  @StateObject private var viewModel = LoginViewModel()
+  
+  
   var body: some View {
     ZStack {
      
@@ -52,9 +56,7 @@ struct LoginRegisterScreen: View {
           .frame(width: 200, height: 200)
         
         
-        LoginView(message: $errorMessage) {
-          isSignupPageDisplayed.toggle()
-        }
+        loginCard
           .padding()
         
         Spacer()
@@ -64,18 +66,17 @@ struct LoginRegisterScreen: View {
           .foregroundColor(.secondary)
       }
       .sheet(isPresented: $isSignupPageDisplayed) {
+        
         RegisterView()
           .padding()
       }
       .overlay(alignment: .bottom) {
-        if let errorMessage = errorMessage {
-          SnackbarView(message: errorMessage, type: .error) {
-            withAnimation(.linear(duration: 0.2)) {
-              self.errorMessage = nil
-            }
-          }
-          .padding(.horizontal)
+       // snackbar here
+        SnackbarView(isDisplayed: $viewModel.showAlert, message: viewModel.errorMessage, type: .error) {
+          viewModel.showAlert = false
+          viewModel.errorMessage = nil
         }
+        .padding(.horizontal)
       }
     }
     .onTapGesture {
@@ -91,5 +92,70 @@ struct LoginRegisterView_Previews: PreviewProvider {
     ZStack {
       LoginRegisterScreen()
     }
+  }
+}
+
+
+extension LoginRegisterScreen {
+  
+  private var loginCard: some View {
+    VStack(spacing: 20) {
+      
+      Text("Welcome back")
+        .font(.title2)
+        .fontWeight(.semibold)
+      
+      UnderlinedTextField(
+        text: $viewModel.email,
+        activeIcon: "person.fill",
+        defaultIcon: "person",
+        placeholder: "Email"
+      )
+      
+      UnderlinedTextField(
+        text: $viewModel.password,
+        activeIcon: "key.fill",
+        defaultIcon: "key",
+        placeholder: "Password",
+        type: .secure
+      )
+      
+      HStack {
+        Spacer()
+        Text("Forgot Password?")
+          .font(.footnote)
+          .foregroundColor(.secondary)
+          .padding()
+          .onTapGesture {
+            isSignupPageDisplayed.toggle()
+          }
+      }
+      
+      Button(action: {
+        Task {
+          await viewModel.login()
+        }
+      }) {
+        Group{
+          if !viewModel.isLoading {
+            Text("LOGIN")
+          } else {
+            ProgressView()
+              .tint(.white)
+          }
+        }
+          .blockCapsuleButtonStyle()
+          .padding(.horizontal)
+      }
+      .disabled(viewModel.isLoading)
+      .buttonStyle(.withPressableButtonStyle)
+      .offset(y: 40)
+    }
+    .padding()
+    .background(
+      RoundedRectangle(cornerRadius: 12)
+        .fill(Color.theme.surface)
+    )
+    .shadow(color: .black.opacity(0.4), radius: 20, x: 0, y: 20)
   }
 }

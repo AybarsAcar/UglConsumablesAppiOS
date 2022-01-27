@@ -9,24 +9,26 @@ import SwiftUI
 
 struct SnackbarView: View {
   
-  @Environment(\.presentationMode) private var presentationMode
-  
-  let message: String
+  @Binding var isDisplayed: Bool
+  let message: String?
   let type: SnackbarType
   let onDismiss: () -> Void
   
   @State private var animate: Bool = false
   
   var body: some View {
+    
     HStack {
       Image(systemName: getSystemImageName())
         .font(.title2)
       
       Spacer(minLength: 4)
       
-      Text(message)
-        .multilineTextAlignment(.leading)
-        .font(.headline)
+      if let message = message {
+        Text(message)
+          .multilineTextAlignment(.leading)
+          .font(.headline)
+      }
       
       Spacer(minLength: 4)
       
@@ -39,15 +41,12 @@ struct SnackbarView: View {
     .cornerRadius(10)
     .shadow(color: .black.opacity(0.4), radius: 10, x: 0, y: 10)
     .onTapGesture {
-      onDismiss()
-      presentationMode.wrappedValue.dismiss()
-    }
-    .transition(.move(edge: .bottom))
-    .onAppear {
       withAnimation(.linear) {
-        animate.toggle()
+        onDismiss()
       }
     }
+    .opacity(isDisplayed ? 1.0 : 0.0)
+    
   }
 }
 
@@ -85,14 +84,14 @@ extension SnackbarView {
 struct SnackbarView_Previews: PreviewProvider {
   static var previews: some View {
     Group {
-      SnackbarView(message: "Invalid Credentials", type: .error) { }
-      SnackbarView(message: "Please update your credentials", type: .warning) { }
-      SnackbarView(message: "Successfully Logged In", type: .success) { }
+      SnackbarView(isDisplayed: .constant(true), message: "Invalid Credentials", type: .error) { }
+      SnackbarView(isDisplayed: .constant(true), message: "Please update your credentials", type: .warning) { }
+      SnackbarView(isDisplayed: .constant(true), message: "Successfully Logged In", type: .success) { }
       
       Group {
-        SnackbarView(message: "Invalid Credentials", type: .error) { }
-        SnackbarView(message: "Please update your credentials", type: .warning) { }
-        SnackbarView(message: "Successfully Logged In", type: .success) { }
+        SnackbarView(isDisplayed: .constant(true), message: "Invalid Credentials", type: .error) { }
+        SnackbarView(isDisplayed: .constant(true), message: "Please update your credentials", type: .warning) { }
+        SnackbarView(isDisplayed: .constant(true), message: "Successfully Logged In", type: .success) { }
       }
       .preferredColorScheme(.dark)
     }
