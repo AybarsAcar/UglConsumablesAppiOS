@@ -39,6 +39,9 @@
 		00A25BB1279D303900DF553F /* UIApplication+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A25BB0279D303900DF553F /* UIApplication+Extensions.swift */; };
 		00B9A88C279EA10B00842850 /* SlidingTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B9A88B279EA10B00842850 /* SlidingTabView.swift */; };
 		00B9A88F279EA4E300842850 /* UnderlinedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B9A88E279EA4E300842850 /* UnderlinedTextField.swift */; };
+		00C656D727A48CA000CD255A /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C656D627A48CA000CD255A /* CameraView.swift */; };
+		00C656D927A48D2E00CD255A /* CameraModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C656D827A48D2E00CD255A /* CameraModel.swift */; };
+		00C656DB27A492EC00CD255A /* CameraPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C656DA27A492EC00CD255A /* CameraPreview.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -75,6 +78,9 @@
 		00A25BB0279D303900DF553F /* UIApplication+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extensions.swift"; sourceTree = "<group>"; };
 		00B9A88B279EA10B00842850 /* SlidingTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlidingTabView.swift; sourceTree = "<group>"; };
 		00B9A88E279EA4E300842850 /* UnderlinedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderlinedTextField.swift; sourceTree = "<group>"; };
+		00C656D627A48CA000CD255A /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
+		00C656D827A48D2E00CD255A /* CameraModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraModel.swift; sourceTree = "<group>"; };
+		00C656DA27A492EC00CD255A /* CameraPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPreview.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -262,6 +268,7 @@
 		007C0BFF27A0C1A900286E0E /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				00C656D527A48C3A00CD255A /* Camera */,
 				00B9A88B279EA10B00842850 /* SlidingTabView.swift */,
 				007C0C0027A0C20000286E0E /* SnackbarView.swift */,
 				0015C13627A3E2D6006A7D7F /* TabBar */,
@@ -317,6 +324,16 @@
 				00B9A88E279EA4E300842850 /* UnderlinedTextField.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		00C656D527A48C3A00CD255A /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+				00C656D627A48CA000CD255A /* CameraView.swift */,
+				00C656D827A48D2E00CD255A /* CameraModel.swift */,
+				00C656DA27A492EC00CD255A /* CameraPreview.swift */,
+			);
+			path = Camera;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -393,6 +410,7 @@
 				008CA0AC279FFADF00EECF84 /* APIService.swift in Sources */,
 				0015C14627A3EC5A006A7D7F /* ProfileView.swift in Sources */,
 				00316696279BB88D001EFFD6 /* Color+Extensions.swift in Sources */,
+				00C656D727A48CA000CD255A /* CameraView.swift in Sources */,
 				0031668D279BB766001EFFD6 /* User.swift in Sources */,
 				00316679279BB386001EFFD6 /* UGLConsumablesApp.swift in Sources */,
 				0015C13827A3E300006A7D7F /* TabBarItem.swift in Sources */,
@@ -403,6 +421,7 @@
 				00B9A88F279EA4E300842850 /* UnderlinedTextField.swift in Sources */,
 				0049802B279D296E00C43555 /* View+Extensions.swift in Sources */,
 				0015C14027A3E69A006A7D7F /* CustomTabBarView.swift in Sources */,
+				00C656D927A48D2E00CD255A /* CameraModel.swift in Sources */,
 				00A25BB1279D303900DF553F /* UIApplication+Extensions.swift in Sources */,
 				008CA0A2279FF7F900EECF84 /* LoginViewModel.swift in Sources */,
 				0015C14C27A3F3FD006A7D7F /* CreateView.swift in Sources */,
@@ -413,6 +432,7 @@
 				0015C13A27A3E4D3006A7D7F /* TabBarItemsPreferenceKey.swift in Sources */,
 				008CA0A0279FF32200EECF84 /* RegisterView.swift in Sources */,
 				0015C14A27A3F19E006A7D7F /* SettingsView.swift in Sources */,
+				00C656DB27A492EC00CD255A /* CameraPreview.swift in Sources */,
 				0015C12B27A3D4D4006A7D7F /* HomeScreen.swift in Sources */,
 				0015C13527A3DE7D006A7D7F /* ProfileViewModel.swift in Sources */,
 				00316693279BB7FA001EFFD6 /* LoginRegisterScreen.swift in Sources */,
@@ -552,6 +572,8 @@
 				DEVELOPMENT_TEAM = QH7853B55W;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app requires access to your device's camera.";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "This app requires access to your device's photo library.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -581,6 +603,8 @@
 				DEVELOPMENT_TEAM = QH7853B55W;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app requires access to your device's camera.";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "This app requires access to your device's photo library.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
