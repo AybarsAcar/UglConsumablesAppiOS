@@ -1,5 +1,5 @@
 //
-//  HomeViewModel.swift
+//  ProfileViewModel.swift
 //  UGLConsumables
 //
 //  Created by Aybars Acar on 28/1/2022.
@@ -8,7 +8,7 @@
 import Foundation
 
 
-class HomeViewModel: ObservableObject {
+class ProfileViewModel: ObservableObject {
   
   private let _coreData: UserDataService
   
