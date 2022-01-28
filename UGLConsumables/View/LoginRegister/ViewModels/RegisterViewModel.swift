@@ -14,7 +14,7 @@ class RegisterViewModel: ObservableObject {
   @Published var email: String = ""
   @Published var password: String = ""
   @Published var confirmPassword: String = ""
-  @Published var user: AccountDto? = nil
+  @Published var account: AccountDto? = nil
   
   @Published var isLoading: Bool = false
   @Published var showAlert: Bool = false
@@ -22,9 +22,11 @@ class RegisterViewModel: ObservableObject {
   
   
   private let _service: UserService
+  private let _coreData: UserDataService
   
   init() {
     _service = UserService()
+    _coreData = UserDataService()
   }
   
   
@@ -50,12 +52,24 @@ class RegisterViewModel: ObservableObject {
     }
     
     do {
-      user = try await _service.signUp(with: RegisterAccountDetails(username: username, email: email, password: password))
+      account = try await _service.signUp(with: RegisterAccountDetails(username: username, email: email, password: password))
       
+      // clear the form values
       username = ""
       email = ""
       password = ""
       confirmPassword = ""
+      
+      // save the user token to UserDefaults
+      if let token = account?.token {
+        UserDefaults.standard.set(token, forKey: "token")
+        UserDefaults.standard.set(true, forKey: "isLoggedIn")
+      }
+      
+      // save the user in local device db
+      if let user = account?.toUserModel() {
+        _coreData.update(user: user)
+      }
       
     } catch {
       print("ERROR\n\(error.localizedDescription)")

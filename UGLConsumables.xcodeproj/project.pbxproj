@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0015C12B27A3D4D4006A7D7F /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0015C12A27A3D4D4006A7D7F /* HomeScreen.swift */; };
+		0015C13027A3D5E9006A7D7F /* UGLConsumablesContainer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0015C12E27A3D5E9006A7D7F /* UGLConsumablesContainer.xcdatamodeld */; };
+		0015C13227A3D6CA006A7D7F /* UserDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0015C13127A3D6CA006A7D7F /* UserDataService.swift */; };
+		0015C13527A3DE7D006A7D7F /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0015C13427A3DE7D006A7D7F /* HomeViewModel.swift */; };
 		00316679279BB386001EFFD6 /* UGLConsumablesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00316678279BB386001EFFD6 /* UGLConsumablesApp.swift */; };
 		0031667D279BB387001EFFD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0031667C279BB387001EFFD6 /* Assets.xcassets */; };
 		00316680279BB387001EFFD6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0031667F279BB387001EFFD6 /* Preview Assets.xcassets */; };
@@ -30,6 +34,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0015C12A27A3D4D4006A7D7F /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
+		0015C12F27A3D5E9006A7D7F /* UGLConsumablesContainer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = UGLConsumablesContainer.xcdatamodel; sourceTree = "<group>"; };
+		0015C13127A3D6CA006A7D7F /* UserDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataService.swift; sourceTree = "<group>"; };
+		0015C13427A3DE7D006A7D7F /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		00316675279BB386001EFFD6 /* UGLConsumables.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UGLConsumables.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00316678279BB386001EFFD6 /* UGLConsumablesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UGLConsumablesApp.swift; sourceTree = "<group>"; };
 		0031667C279BB387001EFFD6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -64,6 +72,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0015C12927A3D4C9006A7D7F /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				0015C13327A3DE74006A7D7F /* ViewModels */,
+				0015C12A27A3D4D4006A7D7F /* HomeScreen.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		0015C12C27A3D54F006A7D7F /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				0015C12D27A3D560006A7D7F /* Local */,
+				00316688279BB695001EFFD6 /* Remote */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		0015C12D27A3D560006A7D7F /* Local */ = {
+			isa = PBXGroup;
+			children = (
+				0015C12E27A3D5E9006A7D7F /* UGLConsumablesContainer.xcdatamodeld */,
+				0015C13127A3D6CA006A7D7F /* UserDataService.swift */,
+			);
+			path = Local;
+			sourceTree = "<group>";
+		};
+		0015C13327A3DE74006A7D7F /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				0015C13427A3DE7D006A7D7F /* HomeViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		0031666C279BB385001EFFD6 = {
 			isa = PBXGroup;
 			children = (
@@ -85,10 +128,10 @@
 			children = (
 				00316678279BB386001EFFD6 /* UGLConsumablesApp.swift */,
 				0031667C279BB387001EFFD6 /* Assets.xcassets */,
+				0015C12C27A3D54F006A7D7F /* Data */,
 				00316686279BB66E001EFFD6 /* Domain */,
 				00316694279BB855001EFFD6 /* Extensions */,
 				0031667E279BB387001EFFD6 /* Preview Content */,
-				00316688279BB695001EFFD6 /* Remote */,
 				00A25BAD279D2CC500DF553F /* Styles */,
 				0031668E279BB7C5001EFFD6 /* View */,
 			);
@@ -140,6 +183,7 @@
 		0031668E279BB7C5001EFFD6 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0015C12927A3D4C9006A7D7F /* Home */,
 				007C0C0227A0CF8900286E0E /* LaunchScreen */,
 				007C0BFF27A0C1A900286E0E /* Common */,
 				0031668F279BB7D1001EFFD6 /* LoginRegister */,
@@ -312,6 +356,7 @@
 				00316679279BB386001EFFD6 /* UGLConsumablesApp.swift in Sources */,
 				0031668B279BB6B3001EFFD6 /* AccountDto.swift in Sources */,
 				00A25BAF279D2CD500DF553F /* UGLButton.swift in Sources */,
+				0015C13227A3D6CA006A7D7F /* UserDataService.swift in Sources */,
 				00B9A88F279EA4E300842850 /* UnderlinedTextField.swift in Sources */,
 				0049802B279D296E00C43555 /* View+Extensions.swift in Sources */,
 				00A25BB1279D303900DF553F /* UIApplication+Extensions.swift in Sources */,
@@ -320,9 +365,12 @@
 				008CA0A8279FF95D00EECF84 /* UserService.swift in Sources */,
 				007C0C0127A0C20000286E0E /* SnackbarView.swift in Sources */,
 				008CA0A0279FF32200EECF84 /* RegisterView.swift in Sources */,
+				0015C12B27A3D4D4006A7D7F /* HomeScreen.swift in Sources */,
+				0015C13527A3DE7D006A7D7F /* HomeViewModel.swift in Sources */,
 				00316693279BB7FA001EFFD6 /* LoginRegisterScreen.swift in Sources */,
 				008CA0AA279FF97000EECF84 /* UserRepository.swift in Sources */,
 				00B9A88C279EA10B00842850 /* SlidingTabView.swift in Sources */,
+				0015C13027A3D5E9006A7D7F /* UGLConsumablesContainer.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -525,6 +573,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		0015C12E27A3D5E9006A7D7F /* UGLConsumablesContainer.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				0015C12F27A3D5E9006A7D7F /* UGLConsumablesContainer.xcdatamodel */,
+			);
+			currentVersion = 0015C12F27A3D5E9006A7D7F /* UGLConsumablesContainer.xcdatamodel */;
+			path = UGLConsumablesContainer.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 0031666D279BB385001EFFD6 /* Project object */;
 }

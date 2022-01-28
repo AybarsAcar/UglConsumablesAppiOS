@@ -17,8 +17,15 @@ struct UGLConsumablesApp: App {
   var body: some Scene {
     WindowGroup {
       ZStack {
-        LoginRegisterScreen()
-          .preferredColorScheme(isLightTheme ? .light : .dark)
+        if !isLoggedIn {
+          LoginRegisterScreen()
+            .preferredColorScheme(isLightTheme ? .light : .dark)
+        } else {
+          NavigationView {
+            HomeScreen()
+              .preferredColorScheme(isLightTheme ? .light : .dark)
+          }
+        }
       }
     }
   }

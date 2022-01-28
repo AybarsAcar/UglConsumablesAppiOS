@@ -13,7 +13,7 @@ struct LoginRegisterScreen: View {
   @Environment(\.colorScheme) var colorScheme
   @AppStorage("isLightTheme") private var isLightTheme: Bool = true
   
-  @State private var isSignupPageDisplayed: Bool = false
+  @State private var isSignUpViewDisplayed: Bool = false
   @State private var errorMessage: String?
   
   @AppStorage("isLoggedIn") private var isLoggedIn: Bool = false
@@ -61,11 +61,22 @@ struct LoginRegisterScreen: View {
         
         Spacer()
         
-        Text("All Rights Reserved © Aybars Acar")
-          .font(.footnote)
-          .foregroundColor(.secondary)
+        HStack {
+          Text("Don't have an account?")
+            .font(.footnote)
+            .foregroundColor(.secondary)
+          
+          Text("Sign Up")
+            .font(.footnote)
+            .fontWeight(.semibold)
+            .underline()
+            .padding()
+            .onTapGesture {
+              isSignUpViewDisplayed.toggle()
+            }
+        }
       }
-      .sheet(isPresented: $isSignupPageDisplayed) {
+      .sheet(isPresented: $isSignUpViewDisplayed) {
         
         RegisterView()
           .padding()
@@ -127,7 +138,7 @@ extension LoginRegisterScreen {
           .foregroundColor(.secondary)
           .padding()
           .onTapGesture {
-            isSignupPageDisplayed.toggle()
+            // forgot email
           }
       }
       
