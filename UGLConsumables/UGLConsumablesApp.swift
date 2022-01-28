@@ -19,12 +19,12 @@ struct UGLConsumablesApp: App {
       ZStack {
         if !isLoggedIn {
           LoginRegisterScreen()
+            .transition(.move(edge: .bottom))
             .preferredColorScheme(isLightTheme ? .light : .dark)
         } else {
-          NavigationView {
-            HomeScreen()
-              .preferredColorScheme(isLightTheme ? .light : .dark)
-          }
+          HomeScreen()
+            .transition(.move(edge: .bottom))
+            .preferredColorScheme(isLightTheme ? .light : .dark)
         }
       }
     }

@@ -10,23 +10,28 @@ import SwiftUI
 
 struct HomeScreen: View {
   
-  @ObservedObject private var viewModel = HomeViewModel()
+  @State private var selection: String = "Home"
+  @State private var tabSelection: TabBarItem = .home
   
   var body: some View {
-    VStack {
-      Text("Home")
-      
-      Button {
-        viewModel.logout()
-      } label: {
-        Text("Logout")
-          .blockCapsuleButtonStyle(backgroundColor: .black, foregroundColor: .white)
+    CustomTabBarContainerView(selection: $tabSelection) {
+      NavigationView{
+        HomeView()
       }
-      .padding()
-
+      .tabBarItem(tab: .home, selection: $tabSelection)
       
+      NavigationView {
+        ProfileView()
+      }
+      .tabBarItem(tab: .profile, selection: $tabSelection)
+      
+      Color.orange
+        .tabBarItem(tab: .messages, selection: $tabSelection)
+      
+      
+      Color.red
+        .tabBarItem(tab: .dashboard, selection: $tabSelection)
     }
-    .navigationTitle("Home Screen")
   }
 }
 
@@ -34,8 +39,6 @@ struct HomeScreen: View {
 
 struct HomeScreen_Previews: PreviewProvider {
   static var previews: some View {
-    NavigationView {
-      HomeScreen()
-    }
+    HomeScreen()
   }
 }
