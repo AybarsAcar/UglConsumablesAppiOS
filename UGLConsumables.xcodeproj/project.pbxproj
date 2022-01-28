@@ -17,6 +17,8 @@
 		0015C14027A3E69A006A7D7F /* CustomTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0015C13F27A3E69A006A7D7F /* CustomTabBarView.swift */; };
 		0015C14327A3E87E006A7D7F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0015C14227A3E87E006A7D7F /* HomeView.swift */; };
 		0015C14627A3EC5A006A7D7F /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0015C14527A3EC5A006A7D7F /* ProfileView.swift */; };
+		0015C14A27A3F19E006A7D7F /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0015C14927A3F19E006A7D7F /* SettingsView.swift */; };
+		0015C14C27A3F3FD006A7D7F /* CreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0015C14B27A3F3FD006A7D7F /* CreateView.swift */; };
 		00316679279BB386001EFFD6 /* UGLConsumablesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00316678279BB386001EFFD6 /* UGLConsumablesApp.swift */; };
 		0031667D279BB387001EFFD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0031667C279BB387001EFFD6 /* Assets.xcassets */; };
 		00316680279BB387001EFFD6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0031667F279BB387001EFFD6 /* Preview Assets.xcassets */; };
@@ -50,6 +52,8 @@
 		0015C13F27A3E69A006A7D7F /* CustomTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarView.swift; sourceTree = "<group>"; };
 		0015C14227A3E87E006A7D7F /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		0015C14527A3EC5A006A7D7F /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		0015C14927A3F19E006A7D7F /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		0015C14B27A3F3FD006A7D7F /* CreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateView.swift; sourceTree = "<group>"; };
 		00316675279BB386001EFFD6 /* UGLConsumables.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UGLConsumables.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00316678279BB386001EFFD6 /* UGLConsumablesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UGLConsumablesApp.swift; sourceTree = "<group>"; };
 		0031667C279BB387001EFFD6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -135,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				0015C14227A3E87E006A7D7F /* HomeView.swift */,
+				0015C14B27A3F3FD006A7D7F /* CreateView.swift */,
 			);
 			path = HomeView;
 			sourceTree = "<group>";
@@ -144,6 +149,7 @@
 			children = (
 				0015C13327A3DE74006A7D7F /* ViewModels */,
 				0015C14527A3EC5A006A7D7F /* ProfileView.swift */,
+				0015C14927A3F19E006A7D7F /* SettingsView.swift */,
 			);
 			path = ProfileView;
 			sourceTree = "<group>";
@@ -228,7 +234,6 @@
 				007C0C0227A0CF8900286E0E /* LaunchScreen */,
 				007C0BFF27A0C1A900286E0E /* Common */,
 				0031668F279BB7D1001EFFD6 /* LoginRegister */,
-				00B9A88A279EA10000842850 /* Utils */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -257,8 +262,9 @@
 		007C0BFF27A0C1A900286E0E /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				0015C13627A3E2D6006A7D7F /* TabBar */,
+				00B9A88B279EA10B00842850 /* SlidingTabView.swift */,
 				007C0C0027A0C20000286E0E /* SnackbarView.swift */,
+				0015C13627A3E2D6006A7D7F /* TabBar */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -303,14 +309,6 @@
 				00A25BAE279D2CD500DF553F /* UGLButton.swift */,
 			);
 			path = Styles;
-			sourceTree = "<group>";
-		};
-		00B9A88A279EA10000842850 /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				00B9A88B279EA10B00842850 /* SlidingTabView.swift */,
-			);
-			path = Utils;
 			sourceTree = "<group>";
 		};
 		00B9A88D279EA4AF00842850 /* Components */ = {
@@ -407,12 +405,14 @@
 				0015C14027A3E69A006A7D7F /* CustomTabBarView.swift in Sources */,
 				00A25BB1279D303900DF553F /* UIApplication+Extensions.swift in Sources */,
 				008CA0A2279FF7F900EECF84 /* LoginViewModel.swift in Sources */,
+				0015C14C27A3F3FD006A7D7F /* CreateView.swift in Sources */,
 				008CA0A4279FF85A00EECF84 /* RegisterViewModel.swift in Sources */,
 				0015C14327A3E87E006A7D7F /* HomeView.swift in Sources */,
 				008CA0A8279FF95D00EECF84 /* UserService.swift in Sources */,
 				007C0C0127A0C20000286E0E /* SnackbarView.swift in Sources */,
 				0015C13A27A3E4D3006A7D7F /* TabBarItemsPreferenceKey.swift in Sources */,
 				008CA0A0279FF32200EECF84 /* RegisterView.swift in Sources */,
+				0015C14A27A3F19E006A7D7F /* SettingsView.swift in Sources */,
 				0015C12B27A3D4D4006A7D7F /* HomeScreen.swift in Sources */,
 				0015C13527A3DE7D006A7D7F /* ProfileViewModel.swift in Sources */,
 				00316693279BB7FA001EFFD6 /* LoginRegisterScreen.swift in Sources */,

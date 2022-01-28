@@ -10,19 +10,29 @@ import SwiftUI
 
 struct HomeView: View {
   
+  @State private var showCreateView: Bool = false
+  
   var body: some View {
-    Text("Hello, World!")
-      .navigationTitle("Home View")
-      .navigationBarTitleDisplayMode(.inline)
-      .toolbar {
-        ToolbarItem(placement: .navigationBarTrailing) {
-          Button(action: {
-          }) {
-            Image(systemName: "plus.circle")
-              .foregroundColor(.primary)
-          }
+    ScrollView{
+      VStack{
+        Text("Hello, World!")
+      }
+    }
+    .navigationTitle("Home View")
+    .navigationBarTitleDisplayMode(.inline)
+    .toolbar {
+      ToolbarItem(placement: .navigationBarTrailing) {
+        Button(action: {
+          showCreateView.toggle()
+        }) {
+          Image(systemName: "plus.circle")
+            .foregroundColor(.primary)
         }
       }
+    }
+    .fullScreenCover(isPresented: $showCreateView) {
+      CreateView()
+    }
   }
 }
 
