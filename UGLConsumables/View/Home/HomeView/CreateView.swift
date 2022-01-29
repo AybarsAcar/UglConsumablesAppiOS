@@ -10,9 +10,12 @@ import SwiftUI
 struct CreateView: View {
   
   @Environment(\.presentationMode) private var presentationMode
-  @State private var showCamera: Bool = false
   
+  @State private var showCamera: Bool = false
   @State private var name: String = ""
+  
+  @State private var photo: UIImage? = nil
+  
   
   var body: some View {
     NavigationView {
@@ -51,9 +54,11 @@ extension CreateView {
       
       Color.gray.opacity(0.4)
       
-      Image("")
-        .scaledToFit()
-        .frame(width: 300, height: 400)
+      if let photo = photo {
+        Image(uiImage: photo)
+          .scaledToFit()
+          .frame(width: 300, height: 400)
+      }
     }
     .frame(width: 300, height: 400)
     .overlay(alignment: .bottom) {

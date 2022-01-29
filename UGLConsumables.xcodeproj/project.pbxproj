@@ -42,6 +42,9 @@
 		00C656D727A48CA000CD255A /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C656D627A48CA000CD255A /* CameraView.swift */; };
 		00C656D927A48D2E00CD255A /* CameraModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C656D827A48D2E00CD255A /* CameraModel.swift */; };
 		00C656DB27A492EC00CD255A /* CameraPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C656DA27A492EC00CD255A /* CameraPreview.swift */; };
+		00C656DD27A4BB9700CD255A /* AreaOfWorkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C656DC27A4BB9700CD255A /* AreaOfWorkService.swift */; };
+		00C656DF27A4BC0D00CD255A /* AreaOfWorkDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C656DE27A4BC0D00CD255A /* AreaOfWorkDto.swift */; };
+		00C656E227A4BFFD00CD255A /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C656E127A4BFFD00CD255A /* HomeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -81,6 +84,9 @@
 		00C656D627A48CA000CD255A /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		00C656D827A48D2E00CD255A /* CameraModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraModel.swift; sourceTree = "<group>"; };
 		00C656DA27A492EC00CD255A /* CameraPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPreview.swift; sourceTree = "<group>"; };
+		00C656DC27A4BB9700CD255A /* AreaOfWorkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaOfWorkService.swift; sourceTree = "<group>"; };
+		00C656DE27A4BC0D00CD255A /* AreaOfWorkDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaOfWorkDto.swift; sourceTree = "<group>"; };
+		00C656E127A4BFFD00CD255A /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +150,7 @@
 		0015C14127A3E870006A7D7F /* HomeView */ = {
 			isa = PBXGroup;
 			children = (
+				00C656E027A4BFF300CD255A /* ViewModels */,
 				0015C14227A3E87E006A7D7F /* HomeView.swift */,
 				0015C14B27A3F3FD006A7D7F /* CreateView.swift */,
 			);
@@ -229,6 +236,7 @@
 			isa = PBXGroup;
 			children = (
 				0031668A279BB6B3001EFFD6 /* AccountDto.swift */,
+				00C656DE27A4BC0D00CD255A /* AreaOfWorkDto.swift */,
 			);
 			path = DTOs;
 			sourceTree = "<group>";
@@ -306,6 +314,7 @@
 			children = (
 				008CA0A7279FF95D00EECF84 /* UserService.swift */,
 				008CA0AB279FFADF00EECF84 /* APIService.swift */,
+				00C656DC27A4BB9700CD255A /* AreaOfWorkService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -334,6 +343,14 @@
 				00C656DA27A492EC00CD255A /* CameraPreview.swift */,
 			);
 			path = Camera;
+			sourceTree = "<group>";
+		};
+		00C656E027A4BFF300CD255A /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				00C656E127A4BFFD00CD255A /* HomeViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -411,6 +428,7 @@
 				0015C14627A3EC5A006A7D7F /* ProfileView.swift in Sources */,
 				00316696279BB88D001EFFD6 /* Color+Extensions.swift in Sources */,
 				00C656D727A48CA000CD255A /* CameraView.swift in Sources */,
+				00C656DD27A4BB9700CD255A /* AreaOfWorkService.swift in Sources */,
 				0031668D279BB766001EFFD6 /* User.swift in Sources */,
 				00316679279BB386001EFFD6 /* UGLConsumablesApp.swift in Sources */,
 				0015C13827A3E300006A7D7F /* TabBarItem.swift in Sources */,
@@ -428,6 +446,8 @@
 				008CA0A4279FF85A00EECF84 /* RegisterViewModel.swift in Sources */,
 				0015C14327A3E87E006A7D7F /* HomeView.swift in Sources */,
 				008CA0A8279FF95D00EECF84 /* UserService.swift in Sources */,
+				00C656DF27A4BC0D00CD255A /* AreaOfWorkDto.swift in Sources */,
+				00C656E227A4BFFD00CD255A /* HomeViewModel.swift in Sources */,
 				007C0C0127A0C20000286E0E /* SnackbarView.swift in Sources */,
 				0015C13A27A3E4D3006A7D7F /* TabBarItemsPreferenceKey.swift in Sources */,
 				008CA0A0279FF32200EECF84 /* RegisterView.swift in Sources */,

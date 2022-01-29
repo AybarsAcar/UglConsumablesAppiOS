@@ -13,6 +13,7 @@ struct CameraView: View {
   @Environment(\.presentationMode) private var presentationMode
   
   @StateObject private var camera = CameraModel()
+
   
   var body: some View {
     ZStack {

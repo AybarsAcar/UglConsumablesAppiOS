@@ -8,13 +8,14 @@
 import Foundation
 
 
-
 class UserService {
+  
+  private let domain: String = "http://127.0.0.1:5000/api"
   
   
   func login(with loginDetails: LoginAccountDetails) async throws -> AccountDto {
     
-    guard let url = URL(string: "http://127.0.0.1:5000/api/Account/login") else {
+    guard let url = URL(string: "\(domain)/Account/login") else {
       throw APIError.invalidURL
     }
     
@@ -57,7 +58,7 @@ class UserService {
   
   func signUp(with registerDetails: RegisterAccountDetails) async throws -> AccountDto {
     
-    guard let url = URL(string: "http://127.0.0.1:5000/api/Account/register") else {
+    guard let url = URL(string: "\(domain)/api/Account/register") else {
       throw APIError.invalidURL
     }
     

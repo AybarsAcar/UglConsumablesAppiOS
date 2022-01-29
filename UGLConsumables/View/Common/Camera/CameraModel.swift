@@ -134,10 +134,10 @@ class CameraModel: NSObject, ObservableObject, AVCapturePhotoCaptureDelegate {
   
   func savePhoto() {
     
-    let image = UIImage(data: self.photoData)!
+    let image = UIImage(data: self.photoData)
     
     // saving image
-    UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
+//    UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
     
     self.isSaved = true
   }

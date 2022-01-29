@@ -12,12 +12,26 @@ struct HomeView: View {
   
   @State private var showCreateView: Bool = false
   
+  @StateObject private var viewModel = HomeViewModel()
+  
+  
   var body: some View {
     ScrollView{
       VStack{
-        Text("Hello, World!")
+        ForEach(viewModel.areaOfWorkDtos) { item in
+          HStack {
+            Text("Service Order: \(item.serviceOrder)")
+            Spacer()
+            Text(item.description)
+          }
+        }
       }
     }
+    .overlay(alignment: .center, content: {
+      if viewModel.isLoading {
+        ProgressView()
+      }
+    })
     .navigationTitle("Home View")
     .navigationBarTitleDisplayMode(.inline)
     .toolbar {
@@ -32,6 +46,9 @@ struct HomeView: View {
     }
     .fullScreenCover(isPresented: $showCreateView) {
       CreateView()
+    }
+    .task {
+      await viewModel.list()
     }
   }
 }
