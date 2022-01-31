@@ -16,17 +16,32 @@ struct HomeView: View {
   
   
   var body: some View {
-    ScrollView{
-      VStack{
+    List {
+      Section(header: Text("Consumables Work Areas")) {
         ForEach(viewModel.areaOfWorkDtos) { item in
-          HStack {
-            Text("Service Order: \(item.serviceOrder)")
-            Spacer()
-            Text(item.description)
+          NavigationLink(destination: Text(item.description)) {
+            listItem(item: item)
+          }
+          .swipeActions(edge: .trailing, allowsFullSwipe: false) {
+            Button {
+              //
+            } label: {
+              Label("Mute", systemImage: "bell.slash.fill")
+            }
+            .tint(.theme.green)
+          }
+          .swipeActions(edge: .trailing, allowsFullSwipe: false) {
+            Button {
+              //
+            } label: {
+              Label("Mute", systemImage: "trash.fill")
+            }
+            .tint(.theme.red)
           }
         }
       }
     }
+    .listStyle(.plain)
     .overlay(alignment: .center, content: {
       if viewModel.isLoading {
         ProgressView()
@@ -48,11 +63,23 @@ struct HomeView: View {
       CreateView()
     }
     .task {
-      await viewModel.list()
+      if viewModel.areaOfWorkDtos.isEmpty {
+        await viewModel.list()
+      }
     }
   }
 }
 
+
+extension HomeView {
+  private func listItem(item: AreaOfWorkDto) -> some View {
+    HStack {
+      Text(verbatim: "\(item.serviceOrder)")
+      Spacer()
+      Text(item.description)
+    }
+  }
+}
 
 
 struct HomeView_Previews: PreviewProvider {
