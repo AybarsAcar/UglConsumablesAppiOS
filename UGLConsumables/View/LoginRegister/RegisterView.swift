@@ -93,7 +93,7 @@ struct RegisterView: View {
         .onTapGesture {
           presentationMode.wrappedValue.dismiss()
         },
-      alignment: .topTrailing
+      alignment: .topLeading
     )
     .overlay(alignment: .bottom) {
       SnackbarView(isDisplayed: $viewModel.showAlert, message: viewModel.errorMessage, type: .error) {

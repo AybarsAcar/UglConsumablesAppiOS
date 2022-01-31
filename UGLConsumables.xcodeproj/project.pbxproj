@@ -26,6 +26,7 @@
 		0031668D279BB766001EFFD6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0031668C279BB766001EFFD6 /* User.swift */; };
 		00316693279BB7FA001EFFD6 /* LoginRegisterScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00316692279BB7FA001EFFD6 /* LoginRegisterScreen.swift */; };
 		00316696279BB88D001EFFD6 /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00316695279BB88D001EFFD6 /* Color+Extensions.swift */; };
+		0036F6B127A7D7A4002EAC3B /* ConsumableDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0036F6B027A7D7A4002EAC3B /* ConsumableDto.swift */; };
 		0049802B279D296E00C43555 /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049802A279D296E00C43555 /* View+Extensions.swift */; };
 		007C0C0127A0C20000286E0E /* SnackbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007C0C0027A0C20000286E0E /* SnackbarView.swift */; };
 		007C0C0427A0CF9E00286E0E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 007C0C0327A0CF9E00286E0E /* LaunchScreen.storyboard */; };
@@ -68,6 +69,7 @@
 		0031668C279BB766001EFFD6 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		00316692279BB7FA001EFFD6 /* LoginRegisterScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRegisterScreen.swift; sourceTree = "<group>"; };
 		00316695279BB88D001EFFD6 /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
+		0036F6B027A7D7A4002EAC3B /* ConsumableDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsumableDto.swift; sourceTree = "<group>"; };
 		0049802A279D296E00C43555 /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
 		007C0C0027A0C20000286E0E /* SnackbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnackbarView.swift; sourceTree = "<group>"; };
 		007C0C0327A0CF9E00286E0E /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -237,6 +239,7 @@
 			children = (
 				0031668A279BB6B3001EFFD6 /* AccountDto.swift */,
 				00C656DE27A4BC0D00CD255A /* AreaOfWorkDto.swift */,
+				0036F6B027A7D7A4002EAC3B /* ConsumableDto.swift */,
 			);
 			path = DTOs;
 			sourceTree = "<group>";
@@ -458,6 +461,7 @@
 				00316693279BB7FA001EFFD6 /* LoginRegisterScreen.swift in Sources */,
 				008CA0AA279FF97000EECF84 /* UserRepository.swift in Sources */,
 				00B9A88C279EA10B00842850 /* SlidingTabView.swift in Sources */,
+				0036F6B127A7D7A4002EAC3B /* ConsumableDto.swift in Sources */,
 				0015C13027A3D5E9006A7D7F /* UGLConsumablesContainer.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

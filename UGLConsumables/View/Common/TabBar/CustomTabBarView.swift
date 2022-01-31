@@ -18,10 +18,11 @@ struct CustomTabBarView: View {
   // to animate the navigation but to prevent the screen animation
   @State var localSelection: TabBarItem
   
+  
   var body: some View {
-    tabBarVersion2
+    tabBarVersion3
       .onChange(of: selection) { newValue in
-        withAnimation(.easeInOut) {
+        withAnimation(.easeInOut(duration: 0.3)) {
           localSelection = newValue
         }
       }
@@ -106,13 +107,58 @@ extension CustomTabBarView {
       }
     }
     .padding(6)
-    .background(Color.white.ignoresSafeArea(edges: .bottom))
+    .background(Color.theme.surface.ignoresSafeArea(edges: .bottom))
     .cornerRadius(10)
     .shadow(color: .black.opacity(0.4), radius: 10, x: 0, y: 5)
     .padding(.horizontal)
   }
 }
 
+
+/// this extension is for 2nd custom tab bar
+extension CustomTabBarView {
+  
+  private func tabView3(tab: TabBarItem) -> some View {
+    VStack {
+      Image(systemName: tab.iconName)
+        .font(.subheadline)
+      
+      Text(tab.title)
+        .font(.system(size: 10, weight: .semibold, design: .rounded))
+    }
+    .foregroundColor(localSelection == tab ? .blue : .gray)
+    .padding(.vertical, 8)
+    .frame(maxWidth: .infinity)
+    .background(
+      ZStack {
+        if localSelection == tab {
+          RoundedRectangle(cornerRadius: 10)
+            .fill(.blue)
+            .frame(width: 80, height: 4)
+            .offset(y: -28)
+            .matchedGeometryEffect(id: "background_rectangle", in: selectionNamespace)
+        }
+      }
+    )
+  }
+  
+  
+  private var tabBarVersion3: some View {
+    HStack {
+      ForEach(tabs, id: \.self) { tab in
+        tabView3(tab: tab)
+          .onTapGesture {
+            switchToTab(tab: tab)
+          }
+      }
+    }
+    .padding(6)
+    .background(Color.theme.surface.ignoresSafeArea(edges: .bottom))
+    .cornerRadius(10)
+    .shadow(color: .black.opacity(0.4), radius: 10, x: 0, y: 5)
+    .padding(.horizontal, 8)
+  }
+}
 
 
 struct CustomTabBarView_Previews: PreviewProvider {

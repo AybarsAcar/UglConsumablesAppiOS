@@ -9,9 +9,7 @@ import Foundation
 
 
 struct AreaOfWorkDto: Codable, Identifiable {
-  
   let id: Int
   let description: String
   let serviceOrder: Int
-  
 }
