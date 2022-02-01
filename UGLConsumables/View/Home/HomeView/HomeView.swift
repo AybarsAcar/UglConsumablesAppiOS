@@ -19,7 +19,7 @@ struct HomeView: View {
     List {
       Section(header: Text("Consumables Work Areas")) {
         ForEach(viewModel.areaOfWorkDtos) { item in
-          NavigationLink(destination: ServiceOrderDetailedView(sapId: item.serviceOrder)) {
+          NavigationLink(destination: ServiceOrderDetailedView(areaOfWork: item)) {
             listItem(item: item)
           }
           .swipeActions(edge: .trailing, allowsFullSwipe: false) {

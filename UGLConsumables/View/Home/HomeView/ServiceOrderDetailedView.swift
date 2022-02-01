@@ -11,9 +11,11 @@ import SwiftUI
 struct ServiceOrderDetailedView: View {
   
   @StateObject private var viewModel: ServiceOrderDetailedViewModel
+  let areaOfWork: AreaOfWorkDto
   
-  init(sapId: Int) {
-    _viewModel = StateObject.init(wrappedValue: ServiceOrderDetailedViewModel(sapId: sapId))
+  init(areaOfWork: AreaOfWorkDto) {
+    self.areaOfWork = areaOfWork
+    self._viewModel = StateObject.init(wrappedValue: ServiceOrderDetailedViewModel(sapId: areaOfWork.serviceOrder))
   }
   
   var body: some View {
@@ -24,6 +26,7 @@ struct ServiceOrderDetailedView: View {
       }
     }
     .listStyle(.plain)
+    .navigationTitle(areaOfWork.description)
   }
 }
 
@@ -31,6 +34,6 @@ struct ServiceOrderDetailedView: View {
 
 struct ServiceOrderDetailedView_Previews: PreviewProvider {
   static var previews: some View {
-    ServiceOrderDetailedView(sapId: 6000)
+    ServiceOrderDetailedView(areaOfWork: AreaOfWorkDto(id: 1, description: "Area of Work", serviceOrder: 6000))
   }
 }

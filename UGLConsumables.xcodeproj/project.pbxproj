@@ -119,9 +119,9 @@
 		0015C12927A3D4C9006A7D7F /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				0015C14427A3EC51006A7D7F /* ProfileView */,
-				0015C14127A3E870006A7D7F /* HomeView */,
 				0015C12A27A3D4D4006A7D7F /* HomeScreen.swift */,
+				0015C14127A3E870006A7D7F /* HomeView */,
+				0015C14427A3EC51006A7D7F /* ProfileView */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -138,8 +138,8 @@
 		0015C12D27A3D560006A7D7F /* Local */ = {
 			isa = PBXGroup;
 			children = (
-				0015C12E27A3D5E9006A7D7F /* UGLConsumablesContainer.xcdatamodeld */,
 				0015C13127A3D6CA006A7D7F /* UserDataService.swift */,
+				0015C12E27A3D5E9006A7D7F /* UGLConsumablesContainer.xcdatamodeld */,
 			);
 			path = Local;
 			sourceTree = "<group>";
@@ -155,10 +155,10 @@
 		0015C13627A3E2D6006A7D7F /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
-				0015C13727A3E300006A7D7F /* TabBarItem.swift */,
-				0015C13927A3E4D3006A7D7F /* TabBarItemsPreferenceKey.swift */,
 				0015C13D27A3E5B6006A7D7F /* CustomTabBarContainerView.swift */,
 				0015C13F27A3E69A006A7D7F /* CustomTabBarView.swift */,
+				0015C13727A3E300006A7D7F /* TabBarItem.swift */,
+				0015C13927A3E4D3006A7D7F /* TabBarItemsPreferenceKey.swift */,
 			);
 			path = TabBar;
 			sourceTree = "<group>";
@@ -166,10 +166,10 @@
 		0015C14127A3E870006A7D7F /* HomeView */ = {
 			isa = PBXGroup;
 			children = (
-				00C656E027A4BFF300CD255A /* ViewModels */,
-				0015C14227A3E87E006A7D7F /* HomeView.swift */,
 				0015C14B27A3F3FD006A7D7F /* CreateView.swift */,
+				0015C14227A3E87E006A7D7F /* HomeView.swift */,
 				00C20DE727A92420002219FC /* ServiceOrderDetailedView.swift */,
+				00C656E027A4BFF300CD255A /* ViewModels */,
 			);
 			path = HomeView;
 			sourceTree = "<group>";
@@ -177,10 +177,10 @@
 		0015C14427A3EC51006A7D7F /* ProfileView */ = {
 			isa = PBXGroup;
 			children = (
-				0015C13327A3DE74006A7D7F /* ViewModels */,
+				00C20DDD27A91284002219FC /* ProfileHeaderView.swift */,
 				0015C14527A3EC5A006A7D7F /* ProfileView.swift */,
 				0015C14927A3F19E006A7D7F /* SettingsView.swift */,
-				00C20DDD27A91284002219FC /* ProfileHeaderView.swift */,
+				0015C13327A3DE74006A7D7F /* ViewModels */,
 			);
 			path = ProfileView;
 			sourceTree = "<group>";
@@ -227,8 +227,8 @@
 		00316686279BB66E001EFFD6 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				008CA0A5279FF8E500EECF84 /* Repositories */,
 				00316687279BB673001EFFD6 /* Models */,
+				008CA0A5279FF8E500EECF84 /* Repositories */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -236,8 +236,8 @@
 		00316687279BB673001EFFD6 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				0031668C279BB766001EFFD6 /* User.swift */,
 				00C20DE127A91664002219FC /* Consumable.swift */,
+				0031668C279BB766001EFFD6 /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -264,9 +264,9 @@
 		0031668E279BB7C5001EFFD6 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				007C0BFF27A0C1A900286E0E /* Common */,
 				0015C12927A3D4C9006A7D7F /* Home */,
 				007C0C0227A0CF8900286E0E /* LaunchScreen */,
-				007C0BFF27A0C1A900286E0E /* Common */,
 				0031668F279BB7D1001EFFD6 /* LoginRegister */,
 			);
 			path = View;
@@ -287,8 +287,8 @@
 			isa = PBXGroup;
 			children = (
 				00316695279BB88D001EFFD6 /* Color+Extensions.swift */,
-				0049802A279D296E00C43555 /* View+Extensions.swift */,
 				00A25BB0279D303900DF553F /* UIApplication+Extensions.swift */,
+				0049802A279D296E00C43555 /* View+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -296,11 +296,11 @@
 		007C0BFF27A0C1A900286E0E /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				00C656D527A48C3A00CD255A /* Camera */,
+				00C20DE327A919B8002219FC /* DropdownPicker.swift */,
 				00B9A88B279EA10B00842850 /* SlidingTabView.swift */,
 				007C0C0027A0C20000286E0E /* SnackbarView.swift */,
+				00C656D527A48C3A00CD255A /* Camera */,
 				0015C13627A3E2D6006A7D7F /* TabBar */,
-				00C20DE327A919B8002219FC /* DropdownPicker.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -333,10 +333,10 @@
 		008CA0A6279FF93800EECF84 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				008CA0A7279FF95D00EECF84 /* UserService.swift */,
 				008CA0AB279FFADF00EECF84 /* APIService.swift */,
 				00C656DC27A4BB9700CD255A /* AreaOfWorkService.swift */,
 				00C20DE527A922FD002219FC /* ConsumableService.swift */,
+				008CA0A7279FF95D00EECF84 /* UserService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -360,9 +360,9 @@
 		00C656D527A48C3A00CD255A /* Camera */ = {
 			isa = PBXGroup;
 			children = (
-				00C656D627A48CA000CD255A /* CameraView.swift */,
 				00C656D827A48D2E00CD255A /* CameraModel.swift */,
 				00C656DA27A492EC00CD255A /* CameraPreview.swift */,
+				00C656D627A48CA000CD255A /* CameraView.swift */,
 			);
 			path = Camera;
 			sourceTree = "<group>";
@@ -370,8 +370,8 @@
 		00C656E027A4BFF300CD255A /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				00C656E127A4BFFD00CD255A /* HomeViewModel.swift */,
 				00C20DDF27A9153A002219FC /* CreateUpdateConsumableViewModel.swift */,
+				00C656E127A4BFFD00CD255A /* HomeViewModel.swift */,
 				00C20DE927A92455002219FC /* ServiceOrderDetailedViewModel.swift */,
 			);
 			path = ViewModels;
