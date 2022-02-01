@@ -22,7 +22,7 @@ struct CustomTabBarView: View {
   var body: some View {
     tabBarVersion3
       .onChange(of: selection) { newValue in
-        withAnimation(.easeInOut(duration: 0.3)) {
+        withAnimation(.easeInOut(duration: 0.2)) {
           localSelection = newValue
         }
       }
@@ -115,12 +115,12 @@ extension CustomTabBarView {
 }
 
 
-/// this extension is for 2nd custom tab bar
+/// this extension is for 3nd custom tab bar
 extension CustomTabBarView {
   
   private func tabView3(tab: TabBarItem) -> some View {
     VStack {
-      Image(systemName: tab.iconName)
+      Image(systemName: localSelection == tab ? tab.activeIconName : tab.iconName)
         .font(.subheadline)
       
       Text(tab.title)

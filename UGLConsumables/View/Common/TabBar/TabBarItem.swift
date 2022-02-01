@@ -23,6 +23,15 @@ enum TabBarItem: Hashable {
     }
   }
   
+  var activeIconName: String {
+    switch self {
+    case .home: return "house.fill"
+    case .profile: return "person.fill"
+    case .messages: return "message.fill"
+    case .dashboard: return "square.split.2x2.fill"
+    }
+  }
+  
   var title: String {
     switch self {
     case .home: return "Home"

@@ -19,7 +19,7 @@ struct HomeView: View {
     List {
       Section(header: Text("Consumables Work Areas")) {
         ForEach(viewModel.areaOfWorkDtos) { item in
-          NavigationLink(destination: Text(item.description)) {
+          NavigationLink(destination: ServiceOrderDetailedView(sapId: item.serviceOrder)) {
             listItem(item: item)
           }
           .swipeActions(edge: .trailing, allowsFullSwipe: false) {
@@ -39,6 +39,11 @@ struct HomeView: View {
             .tint(.theme.red)
           }
         }
+      }
+    }
+    .refreshable {
+      Task {
+        await viewModel.list()
       }
     }
     .listStyle(.plain)

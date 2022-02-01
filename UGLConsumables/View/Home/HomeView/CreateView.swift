@@ -11,23 +11,33 @@ struct CreateView: View {
   
   @Environment(\.presentationMode) private var presentationMode
   
-  @State private var showCamera: Bool = false
-  @State private var name: String = ""
+  @StateObject private var viewModel = CreateUpdateConsumableViewModel()
   
+  @State private var showCamera: Bool = false
   @State private var photo: UIImage? = nil
+  @State private var selection: Int = 0
   
   
   var body: some View {
     NavigationView {
       ScrollView {
-        VStack{
+        VStack {
           imageView
             .padding(40)
             .fullScreenCover(isPresented: $showCamera) {
               CameraView()
             }
           
-          UnderlinedTextField(text: $name, activeIcon: "doc.text.image.fill", defaultIcon: "doc.text.image", placeholder: "Name")
+          UnderlinedTextField(text: $viewModel.sapId, activeIcon: "doc.text.image.fill", defaultIcon: "doc.text.image", placeholder: "Sap Id")
+            .keyboardType(.numberPad)
+          
+          UnderlinedTextField(text: $viewModel.description, activeIcon: "doc.text.image.fill", defaultIcon: "doc.text.image", placeholder: "Description")
+          
+          DropdownPicker(title: "Unit of Measure", selection: $selection, options: Consumable.UnitOfMeasure.allCases.map({ $0.rawValue }))
+          
+          Toggle("PRD", isOn: $viewModel.isPrd)
+          
+          // LIST SERVICE ORDERS HERE
         }
         .padding(.horizontal)
       }

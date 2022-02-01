@@ -40,6 +40,13 @@
 		00A25BB1279D303900DF553F /* UIApplication+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A25BB0279D303900DF553F /* UIApplication+Extensions.swift */; };
 		00B9A88C279EA10B00842850 /* SlidingTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B9A88B279EA10B00842850 /* SlidingTabView.swift */; };
 		00B9A88F279EA4E300842850 /* UnderlinedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B9A88E279EA4E300842850 /* UnderlinedTextField.swift */; };
+		00C20DDE27A91284002219FC /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C20DDD27A91284002219FC /* ProfileHeaderView.swift */; };
+		00C20DE027A9153A002219FC /* CreateUpdateConsumableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C20DDF27A9153A002219FC /* CreateUpdateConsumableViewModel.swift */; };
+		00C20DE227A91664002219FC /* Consumable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C20DE127A91664002219FC /* Consumable.swift */; };
+		00C20DE427A919B8002219FC /* DropdownPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C20DE327A919B8002219FC /* DropdownPicker.swift */; };
+		00C20DE627A922FD002219FC /* ConsumableService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C20DE527A922FD002219FC /* ConsumableService.swift */; };
+		00C20DE827A92420002219FC /* ServiceOrderDetailedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C20DE727A92420002219FC /* ServiceOrderDetailedView.swift */; };
+		00C20DEA27A92455002219FC /* ServiceOrderDetailedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C20DE927A92455002219FC /* ServiceOrderDetailedViewModel.swift */; };
 		00C656D727A48CA000CD255A /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C656D627A48CA000CD255A /* CameraView.swift */; };
 		00C656D927A48D2E00CD255A /* CameraModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C656D827A48D2E00CD255A /* CameraModel.swift */; };
 		00C656DB27A492EC00CD255A /* CameraPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C656DA27A492EC00CD255A /* CameraPreview.swift */; };
@@ -83,6 +90,13 @@
 		00A25BB0279D303900DF553F /* UIApplication+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extensions.swift"; sourceTree = "<group>"; };
 		00B9A88B279EA10B00842850 /* SlidingTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlidingTabView.swift; sourceTree = "<group>"; };
 		00B9A88E279EA4E300842850 /* UnderlinedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderlinedTextField.swift; sourceTree = "<group>"; };
+		00C20DDD27A91284002219FC /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
+		00C20DDF27A9153A002219FC /* CreateUpdateConsumableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUpdateConsumableViewModel.swift; sourceTree = "<group>"; };
+		00C20DE127A91664002219FC /* Consumable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Consumable.swift; sourceTree = "<group>"; };
+		00C20DE327A919B8002219FC /* DropdownPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropdownPicker.swift; sourceTree = "<group>"; };
+		00C20DE527A922FD002219FC /* ConsumableService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsumableService.swift; sourceTree = "<group>"; };
+		00C20DE727A92420002219FC /* ServiceOrderDetailedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceOrderDetailedView.swift; sourceTree = "<group>"; };
+		00C20DE927A92455002219FC /* ServiceOrderDetailedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceOrderDetailedViewModel.swift; sourceTree = "<group>"; };
 		00C656D627A48CA000CD255A /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		00C656D827A48D2E00CD255A /* CameraModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraModel.swift; sourceTree = "<group>"; };
 		00C656DA27A492EC00CD255A /* CameraPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPreview.swift; sourceTree = "<group>"; };
@@ -155,6 +169,7 @@
 				00C656E027A4BFF300CD255A /* ViewModels */,
 				0015C14227A3E87E006A7D7F /* HomeView.swift */,
 				0015C14B27A3F3FD006A7D7F /* CreateView.swift */,
+				00C20DE727A92420002219FC /* ServiceOrderDetailedView.swift */,
 			);
 			path = HomeView;
 			sourceTree = "<group>";
@@ -165,6 +180,7 @@
 				0015C13327A3DE74006A7D7F /* ViewModels */,
 				0015C14527A3EC5A006A7D7F /* ProfileView.swift */,
 				0015C14927A3F19E006A7D7F /* SettingsView.swift */,
+				00C20DDD27A91284002219FC /* ProfileHeaderView.swift */,
 			);
 			path = ProfileView;
 			sourceTree = "<group>";
@@ -221,6 +237,7 @@
 			isa = PBXGroup;
 			children = (
 				0031668C279BB766001EFFD6 /* User.swift */,
+				00C20DE127A91664002219FC /* Consumable.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -283,6 +300,7 @@
 				00B9A88B279EA10B00842850 /* SlidingTabView.swift */,
 				007C0C0027A0C20000286E0E /* SnackbarView.swift */,
 				0015C13627A3E2D6006A7D7F /* TabBar */,
+				00C20DE327A919B8002219FC /* DropdownPicker.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -318,6 +336,7 @@
 				008CA0A7279FF95D00EECF84 /* UserService.swift */,
 				008CA0AB279FFADF00EECF84 /* APIService.swift */,
 				00C656DC27A4BB9700CD255A /* AreaOfWorkService.swift */,
+				00C20DE527A922FD002219FC /* ConsumableService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -352,6 +371,8 @@
 			isa = PBXGroup;
 			children = (
 				00C656E127A4BFFD00CD255A /* HomeViewModel.swift */,
+				00C20DDF27A9153A002219FC /* CreateUpdateConsumableViewModel.swift */,
+				00C20DE927A92455002219FC /* ServiceOrderDetailedViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -444,25 +465,32 @@
 				0015C14027A3E69A006A7D7F /* CustomTabBarView.swift in Sources */,
 				00C656D927A48D2E00CD255A /* CameraModel.swift in Sources */,
 				00A25BB1279D303900DF553F /* UIApplication+Extensions.swift in Sources */,
+				00C20DE427A919B8002219FC /* DropdownPicker.swift in Sources */,
 				008CA0A2279FF7F900EECF84 /* LoginViewModel.swift in Sources */,
 				0015C14C27A3F3FD006A7D7F /* CreateView.swift in Sources */,
+				00C20DEA27A92455002219FC /* ServiceOrderDetailedViewModel.swift in Sources */,
 				008CA0A4279FF85A00EECF84 /* RegisterViewModel.swift in Sources */,
 				0015C14327A3E87E006A7D7F /* HomeView.swift in Sources */,
 				008CA0A8279FF95D00EECF84 /* UserService.swift in Sources */,
 				00C656DF27A4BC0D00CD255A /* AreaOfWorkDto.swift in Sources */,
 				00C656E227A4BFFD00CD255A /* HomeViewModel.swift in Sources */,
+				00C20DE827A92420002219FC /* ServiceOrderDetailedView.swift in Sources */,
 				007C0C0127A0C20000286E0E /* SnackbarView.swift in Sources */,
 				0015C13A27A3E4D3006A7D7F /* TabBarItemsPreferenceKey.swift in Sources */,
 				008CA0A0279FF32200EECF84 /* RegisterView.swift in Sources */,
+				00C20DE227A91664002219FC /* Consumable.swift in Sources */,
 				0015C14A27A3F19E006A7D7F /* SettingsView.swift in Sources */,
 				00C656DB27A492EC00CD255A /* CameraPreview.swift in Sources */,
 				0015C12B27A3D4D4006A7D7F /* HomeScreen.swift in Sources */,
+				00C20DE027A9153A002219FC /* CreateUpdateConsumableViewModel.swift in Sources */,
 				0015C13527A3DE7D006A7D7F /* ProfileViewModel.swift in Sources */,
 				00316693279BB7FA001EFFD6 /* LoginRegisterScreen.swift in Sources */,
 				008CA0AA279FF97000EECF84 /* UserRepository.swift in Sources */,
+				00C20DDE27A91284002219FC /* ProfileHeaderView.swift in Sources */,
 				00B9A88C279EA10B00842850 /* SlidingTabView.swift in Sources */,
 				0036F6B127A7D7A4002EAC3B /* ConsumableDto.swift in Sources */,
 				0015C13027A3D5E9006A7D7F /* UGLConsumablesContainer.xcdatamodeld in Sources */,
+				00C20DE627A922FD002219FC /* ConsumableService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -601,8 +629,9 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -632,8 +661,9 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
