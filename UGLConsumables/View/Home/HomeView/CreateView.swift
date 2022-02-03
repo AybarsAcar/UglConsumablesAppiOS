@@ -17,11 +17,13 @@ struct CreateView: View {
   @State private var photo: UIImage? = nil
   @State private var selection: Int = 0
   
+  @Namespace private var selectedChip
+  
   
   var body: some View {
     NavigationView {
       ScrollView {
-        VStack {
+        VStack(spacing: 20) {
           imageView
             .padding(40)
             .fullScreenCover(isPresented: $showCamera) {
@@ -35,9 +37,61 @@ struct CreateView: View {
           
           DropdownPicker(title: "Unit of Measure", selection: $selection, options: Consumable.UnitOfMeasure.allCases.map({ $0.rawValue }))
           
-          Toggle("PRD", isOn: $viewModel.isPrd)
+          HStack(spacing: 20) {
+            Text("B01")
+              .foregroundColor(viewModel.isPrd ? .primary : .white)
+              .frame(height: 55)
+              .frame(maxWidth: .infinity)
+              .background(
+                ZStack {
+                  Color.clear
+                  if !viewModel.isPrd {
+                    RoundedRectangle(cornerRadius: 12)
+                      .fill(Color.theme.blue)
+                      .frame(height: 55)
+                      .frame(maxWidth: .infinity)
+                      .matchedGeometryEffect(id: "selectedChip", in: selectedChip)
+                  }
+                }
+              )
+              .onTapGesture {
+                withAnimation {
+                  viewModel.isPrd = false
+                }
+              }
+             
+            
+            Text("PRD")
+              .foregroundColor(viewModel.isPrd ? .white : .primary)
+              .frame(height: 55)
+              .frame(maxWidth: .infinity)
+              .background(
+                ZStack {
+                  Color.clear
+                  if viewModel.isPrd {
+                    RoundedRectangle(cornerRadius: 12)
+                      .fill(Color.theme.blue)
+                      .frame(height: 55)
+                      .frame(maxWidth: .infinity)
+                      .matchedGeometryEffect(id: "selectedChip", in: selectedChip)
+                  }
+                }
+              )
+              .onTapGesture {
+                withAnimation {
+                  viewModel.isPrd = true
+                }
+              }
+          }
           
-          // LIST SERVICE ORDERS HERE
+          // LIST SERVICE ORDERS HERE - ADD to service order option
+          
+          Button(action: {}) {
+            Text("Create".uppercased())
+              .blockCapsuleButtonStyle()
+          }
+          .buttonStyle(.withPressableButtonStyle)
+          
         }
         .padding(.horizontal)
       }

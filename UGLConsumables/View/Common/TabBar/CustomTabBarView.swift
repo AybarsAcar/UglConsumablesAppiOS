@@ -17,7 +17,7 @@ struct CustomTabBarView: View {
   
   // to animate the navigation but to prevent the screen animation
   @State var localSelection: TabBarItem
-  
+
   
   var body: some View {
     tabBarVersion3
@@ -134,7 +134,7 @@ extension CustomTabBarView {
         if localSelection == tab {
           RoundedRectangle(cornerRadius: 10)
             .fill(.blue)
-            .frame(width: 80, height: 4)
+            .frame(width: 60, height: 4)
             .offset(y: -28)
             .matchedGeometryEffect(id: "background_rectangle", in: selectionNamespace)
         }

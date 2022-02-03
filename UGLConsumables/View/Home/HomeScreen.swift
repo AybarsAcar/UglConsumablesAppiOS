@@ -25,6 +25,11 @@ struct HomeScreen: View {
       }
       .tabBarItem(tab: .profile, selection: $tabSelection)
       
+      NavigationView {
+        OrderView()
+      }
+        .tabBarItem(tab: .order, selection: $tabSelection)
+      
       Color.orange
         .tabBarItem(tab: .messages, selection: $tabSelection)
       

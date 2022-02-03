@@ -19,7 +19,7 @@ class LoginViewModel: ObservableObject {
   @Published var showAlert: Bool = false
   @Published var errorMessage: String? = nil
   
-  private let _service: UserService
+  private let _service: UserRepository
   private let _coreData: UserDataService
   
   init() {

@@ -9,13 +9,13 @@ import Foundation
 
 protocol UserRepository {
   
-  func signUp(by user: RegisterAccountDetails) async throws -> AccountDto
+  func signUp(with user: RegisterAccountDetails) async throws -> AccountDto
   
-  func login(by user: LoginAccountDetails) async throws -> AccountDto
+  func login(with user: LoginAccountDetails) async throws -> AccountDto
   
-  func getUsers() async throws -> [AccountDto]
-  
-  func getUserByEmail(_ email: String) async throws -> AccountDto
-  
-  func getCurrentUser(token: String) async throws -> AccountDto
+//  func getUsers() async throws -> [AccountDto]
+//  
+//  func getUserByEmail(_ email: String) async throws -> AccountDto
+//  
+//  func getCurrentUser(token: String) async throws -> AccountDto
 }

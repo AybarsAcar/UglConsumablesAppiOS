@@ -8,7 +8,7 @@
 import Foundation
 
 
-class UserService {
+class UserService: UserRepository {
   
   private let domain: String = "http://127.0.0.1:5000/api"
   
