@@ -27,6 +27,11 @@ struct ServiceOrderDetailedView: View {
     }
     .listStyle(.plain)
     .navigationTitle(areaOfWork.description)
+    .overlay(alignment: .center) {
+      if viewModel.isLoading {
+        ProgressView()
+      }
+    }
   }
 }
 

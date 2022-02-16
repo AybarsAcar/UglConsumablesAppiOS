@@ -321,8 +321,8 @@
 		0086776B27ABC6F1008ABC20 /* OrderView */ = {
 			isa = PBXGroup;
 			children = (
-				0086776E27ABC70E008ABC20 /* OrderView.swift */,
 				0086777027ABCDA2008ABC20 /* NewOrderView.swift */,
+				0086776E27ABC70E008ABC20 /* OrderView.swift */,
 			);
 			path = OrderView;
 			sourceTree = "<group>";
