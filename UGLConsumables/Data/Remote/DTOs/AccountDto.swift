@@ -29,9 +29,10 @@ struct LoginAccountDetails: Codable {
 }
 
 
+/// DTO mappers
 extension AccountDto {
   
-  func toUserModel() -> User {
+  func toUser() -> User {
     return User(
       username: self.username,
       email: self.email,

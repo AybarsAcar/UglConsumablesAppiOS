@@ -67,7 +67,7 @@ class RegisterViewModel: ObservableObject {
       }
       
       // save the user in local device db
-      if let user = account?.toUserModel() {
+      if let user = account?.toUser() {
         _coreData.update(user: user)
       }
       

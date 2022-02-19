@@ -26,3 +26,18 @@ struct CreateConsumableFormValues: Codable {
   let isPrd: Bool
   let serviceOrderIds: [Int]
 }
+
+
+/// DTO mappers
+extension ConsumableDto {
+  func toConsumable() -> Consumable {
+    return Consumable(
+      id: self.id,
+      sapId: self.sapId,
+      description: self.description,
+      unitOfMeasure: Consumable.UnitOfMeasure(rawValue: self.unitOfMeasure) ?? .each,
+      isPrd: self.isPrd,
+      quantity: self.quantity,
+      areaOfWorks: self.areaOfWorks)
+  }
+}
