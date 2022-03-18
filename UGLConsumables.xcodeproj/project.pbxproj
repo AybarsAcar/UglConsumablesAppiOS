@@ -19,6 +19,7 @@
 		0015C14627A3EC5A006A7D7F /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0015C14527A3EC5A006A7D7F /* ProfileView.swift */; };
 		0015C14A27A3F19E006A7D7F /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0015C14927A3F19E006A7D7F /* SettingsView.swift */; };
 		0015C14C27A3F3FD006A7D7F /* CreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0015C14B27A3F3FD006A7D7F /* CreateView.swift */; };
+		002F7B6E27C765D1007BB7BB /* CircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002F7B6D27C765D1007BB7BB /* CircleButton.swift */; };
 		00316679279BB386001EFFD6 /* UGLConsumablesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00316678279BB386001EFFD6 /* UGLConsumablesApp.swift */; };
 		0031667D279BB387001EFFD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0031667C279BB387001EFFD6 /* Assets.xcassets */; };
 		00316680279BB387001EFFD6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0031667F279BB387001EFFD6 /* Preview Assets.xcassets */; };
@@ -30,6 +31,7 @@
 		0049802B279D296E00C43555 /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049802A279D296E00C43555 /* View+Extensions.swift */; };
 		007C0C0127A0C20000286E0E /* SnackbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007C0C0027A0C20000286E0E /* SnackbarView.swift */; };
 		007C0C0427A0CF9E00286E0E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 007C0C0327A0CF9E00286E0E /* LaunchScreen.storyboard */; };
+		0082775F27CCBFA6007F184B /* MainAppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0082775E27CCBFA6007F184B /* MainAppState.swift */; };
 		0086776F27ABC70E008ABC20 /* OrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0086776E27ABC70E008ABC20 /* OrderView.swift */; };
 		0086777127ABCDA3008ABC20 /* NewOrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0086777027ABCDA2008ABC20 /* NewOrderView.swift */; };
 		008CA0A0279FF32200EECF84 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008CA09F279FF32200EECF84 /* RegisterView.swift */; };
@@ -70,6 +72,7 @@
 		0015C14527A3EC5A006A7D7F /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		0015C14927A3F19E006A7D7F /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		0015C14B27A3F3FD006A7D7F /* CreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateView.swift; sourceTree = "<group>"; };
+		002F7B6D27C765D1007BB7BB /* CircleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButton.swift; sourceTree = "<group>"; };
 		00316675279BB386001EFFD6 /* UGLConsumables.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UGLConsumables.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00316678279BB386001EFFD6 /* UGLConsumablesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UGLConsumablesApp.swift; sourceTree = "<group>"; };
 		0031667C279BB387001EFFD6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -82,6 +85,7 @@
 		0049802A279D296E00C43555 /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
 		007C0C0027A0C20000286E0E /* SnackbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnackbarView.swift; sourceTree = "<group>"; };
 		007C0C0327A0CF9E00286E0E /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0082775E27CCBFA6007F184B /* MainAppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAppState.swift; sourceTree = "<group>"; };
 		0086776E27ABC70E008ABC20 /* OrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderView.swift; sourceTree = "<group>"; };
 		0086777027ABCDA2008ABC20 /* NewOrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewOrderView.swift; sourceTree = "<group>"; };
 		008CA09F279FF32200EECF84 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
@@ -209,6 +213,7 @@
 		00316677279BB386001EFFD6 /* UGLConsumables */ = {
 			isa = PBXGroup;
 			children = (
+				0082775E27CCBFA6007F184B /* MainAppState.swift */,
 				00316678279BB386001EFFD6 /* UGLConsumablesApp.swift */,
 				0031667C279BB387001EFFD6 /* Assets.xcassets */,
 				0015C12C27A3D54F006A7D7F /* Data */,
@@ -306,6 +311,7 @@
 				007C0C0027A0C20000286E0E /* SnackbarView.swift */,
 				00C656D527A48C3A00CD255A /* Camera */,
 				0015C13627A3E2D6006A7D7F /* TabBar */,
+				002F7B6D27C765D1007BB7BB /* CircleButton.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -507,6 +513,8 @@
 				0086777127ABCDA3008ABC20 /* NewOrderView.swift in Sources */,
 				0015C13027A3D5E9006A7D7F /* UGLConsumablesContainer.xcdatamodeld in Sources */,
 				00C20DE627A922FD002219FC /* ConsumableService.swift in Sources */,
+				002F7B6E27C765D1007BB7BB /* CircleButton.swift in Sources */,
+				0082775F27CCBFA6007F184B /* MainAppState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

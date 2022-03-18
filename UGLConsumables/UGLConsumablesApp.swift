@@ -14,6 +14,9 @@ struct UGLConsumablesApp: App {
   @AppStorage("token") private var token: String = ""
   @AppStorage("isLoggedIn") private var isLoggedIn: Bool = false
   
+  @StateObject private var appState: MainAppState = MainAppState()
+  
+  
   var body: some Scene {
     WindowGroup {
       ZStack {

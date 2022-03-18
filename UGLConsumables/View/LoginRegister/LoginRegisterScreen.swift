@@ -143,10 +143,9 @@ extension LoginRegisterScreen {
       }
       
       Button(action: {
-//        Task {
-//          await viewModel.login()
-//        }
-        isLoggedIn = true
+        Task {
+        await viewModel.login()
+        }
       }) {
         Group{
           if !viewModel.isLoading {
