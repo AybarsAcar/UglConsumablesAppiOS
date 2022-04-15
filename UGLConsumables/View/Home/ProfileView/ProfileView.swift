@@ -13,6 +13,7 @@ struct ProfileView: View {
   @StateObject private var viewModel = ProfileViewModel()
   @State private var isSettigsDiplayed: Bool = false
   
+  @State private var showHalfModal = false
   
   var body: some View {
     VStack{
@@ -29,10 +30,20 @@ struct ProfileView: View {
             .foregroundColor(.primary)
         }
       }
+      
+      ToolbarItem(placement: .navigationBarLeading) {
+        Text("Display")
+          .onTapGesture {
+            showHalfModal.toggle()
+          }
+      }
     }
     .sheet(isPresented: $isSettigsDiplayed) {
       SettingsView(viewModel: viewModel)
         .padding()
+    }
+    .halfSheet(isPresented: $showHalfModal) {
+      
     }
   }
 }
@@ -41,6 +52,8 @@ struct ProfileView: View {
 
 struct ProfileView_Previews: PreviewProvider {
   static var previews: some View {
-    ProfileView()
+    NavigationView {
+      ProfileView()
+    }
   }
 }

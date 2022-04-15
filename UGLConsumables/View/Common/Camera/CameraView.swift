@@ -10,7 +10,7 @@ import SwiftUI
 
 struct CameraView: View {
   
-  @Environment(\.presentationMode) private var presentationMode
+  @Environment(\.dismiss) private var dismiss
   
   @StateObject private var camera = CameraModel()
 
@@ -25,7 +25,7 @@ struct CameraView: View {
         
         HStack(alignment: .center) {
           Button(action: {
-            presentationMode.wrappedValue.dismiss()
+            dismiss()
           }) {
             Image(systemName: "arrowshape.turn.up.backward")
               .foregroundColor(.black)
