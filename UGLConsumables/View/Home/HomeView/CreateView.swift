@@ -9,16 +9,16 @@ import SwiftUI
 
 struct CreateView: View {
   
-  @Environment(\.presentationMode) private var presentationMode
+  @Environment(\.dismiss) private var dismiss
   
   @StateObject private var viewModel = CreateUpdateConsumableViewModel()
   
-  @State private var showCamera: Bool = false
+  @State private var showCamera = false
+  @State private var showUserGallery = false
   @State private var photo: UIImage? = nil
   @State private var selection: Int = 0
   
   @Namespace private var selectedChip
-  
   
   var body: some View {
     NavigationView {
@@ -59,7 +59,7 @@ struct CreateView: View {
                   viewModel.isPrd = false
                 }
               }
-             
+            
             
             Text("PRD")
               .foregroundColor(viewModel.isPrd ? .white : .primary)
@@ -101,7 +101,7 @@ struct CreateView: View {
         ToolbarItem(placement: .navigationBarLeading) {
           Image(systemName: "xmark")
             .onTapGesture {
-              presentationMode.wrappedValue.dismiss()
+              dismiss()
             }
         }
       }
@@ -120,6 +120,7 @@ extension CreateView {
       
       if let photo = photo {
         Image(uiImage: photo)
+          .resizable()
           .scaledToFit()
           .frame(width: 300, height: 400)
       }
@@ -129,6 +130,7 @@ extension CreateView {
       HStack {
         Button(action: {
           // open user gallery
+          showUserGallery.toggle()
         }) {
           Image(systemName: "photo")
             .foregroundColor(.white)
@@ -146,9 +148,12 @@ extension CreateView {
         .padding()
       }
     }
+    .clipShape(RoundedRectangle(cornerRadius: 25, style: .continuous))
+    .sheet(isPresented: $showUserGallery) {
+      ImagePicker(image: $photo)
+    }
   }
 }
-
 
 struct CreateView_Previews: PreviewProvider {
   static var previews: some View {

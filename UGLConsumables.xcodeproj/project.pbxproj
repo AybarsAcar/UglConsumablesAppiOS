@@ -59,6 +59,7 @@
 		00C656E227A4BFFD00CD255A /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C656E127A4BFFD00CD255A /* HomeViewModel.swift */; };
 		00C86B7528090E5B0088EF26 /* HalfSheetViewControllerRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C86B7428090E5B0088EF26 /* HalfSheetViewControllerRepresentable.swift */; };
 		00C86B7828091CC20088EF26 /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C86B7728091CC20088EF26 /* NetworkMonitor.swift */; };
+		00C86B7A280925170088EF26 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C86B79280925170088EF26 /* ImagePicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -115,6 +116,7 @@
 		00C656E127A4BFFD00CD255A /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		00C86B7428090E5B0088EF26 /* HalfSheetViewControllerRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HalfSheetViewControllerRepresentable.swift; sourceTree = "<group>"; };
 		00C86B7728091CC20088EF26 /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
+		00C86B79280925170088EF26 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -318,6 +320,7 @@
 				00C656D527A48C3A00CD255A /* Camera */,
 				00C86B7128090D010088EF26 /* HalfModal */,
 				0015C13627A3E2D6006A7D7F /* TabBar */,
+				00C86B79280925170088EF26 /* ImagePicker.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -517,6 +520,7 @@
 				00C656DF27A4BC0D00CD255A /* AreaOfWorkDto.swift in Sources */,
 				00C656E227A4BFFD00CD255A /* HomeViewModel.swift in Sources */,
 				00C20DE827A92420002219FC /* ServiceOrderDetailedView.swift in Sources */,
+				00C86B7A280925170088EF26 /* ImagePicker.swift in Sources */,
 				007C0C0127A0C20000286E0E /* SnackbarView.swift in Sources */,
 				0015C13A27A3E4D3006A7D7F /* TabBarItemsPreferenceKey.swift in Sources */,
 				008CA0A0279FF32200EECF84 /* RegisterView.swift in Sources */,

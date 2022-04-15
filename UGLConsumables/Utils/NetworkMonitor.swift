@@ -21,6 +21,7 @@ final class NetworkMonitor: ObservableObject {
     self.monitor = NWPathMonitor()
   }
   
+  /// starts monitoring network connection of the device
   func start() {
     // run the monitor
     monitor.start(queue: queue)
@@ -31,7 +32,8 @@ final class NetworkMonitor: ObservableObject {
     }
   }
   
+  /// stops monitoring network connection of the device
   func stop() {
-    
+    monitor.cancel()
   }
 }

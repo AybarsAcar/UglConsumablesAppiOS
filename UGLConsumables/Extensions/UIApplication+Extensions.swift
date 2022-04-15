@@ -5,7 +5,6 @@
 //  Created by Aybars Acar on 23/1/2022.
 //
 
-import Foundation
 import SwiftUI
 
 extension UIApplication {
