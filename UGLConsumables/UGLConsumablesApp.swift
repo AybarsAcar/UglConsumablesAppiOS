@@ -25,15 +25,15 @@ struct UGLConsumablesApp: App {
   var body: some Scene {
     WindowGroup {
       ZStack(alignment: .bottom) {
-//        if !isLoggedIn {
-//          LoginRegisterScreen()
-//            .transition(.move(edge: .bottom))
-//            .preferredColorScheme(isLightTheme ? .light : .dark)
-//        } else {
+        if !isLoggedIn {
+          LoginRegisterScreen()
+            .transition(.move(edge: .bottom))
+            .preferredColorScheme(isLightTheme ? .light : .dark)
+        } else {
           HomeScreen()
             .transition(.move(edge: .bottom))
             .preferredColorScheme(isLightTheme ? .light : .dark)
-//        }
+        }
         
         if networkMonitor.connectionStatus == .unsatisfied {
           SnackbarView(isDisplayed: .constant(true), message: "Not connected to internet", type: .error) {}

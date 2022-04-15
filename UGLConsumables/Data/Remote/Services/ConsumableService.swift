@@ -10,7 +10,7 @@ import Foundation
 
 class ConsumableService {
   
-  private let domain: String = "http://127.0.0.1:5000/api"
+  private let domain: String = "https://ugl-consumables.herokuapp.com/api"
   
   private let token = "THIS TOKEN IS STORED IN DEVICE"
   
