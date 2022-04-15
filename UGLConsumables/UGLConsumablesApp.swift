@@ -14,20 +14,29 @@ struct UGLConsumablesApp: App {
   @AppStorage("token") private var token: String = ""
   @AppStorage("isLoggedIn") private var isLoggedIn: Bool = false
   
-  @StateObject private var appState: MainAppState = MainAppState()
+  @StateObject private var appState = MainAppState()
   
+  private let networkMonitor = NetworkMonitor.shared
+  
+  init() {
+    networkMonitor.start()
+  }
   
   var body: some Scene {
     WindowGroup {
-      ZStack {
-        if !isLoggedIn {
-          LoginRegisterScreen()
-            .transition(.move(edge: .bottom))
-            .preferredColorScheme(isLightTheme ? .light : .dark)
-        } else {
+      ZStack(alignment: .bottom) {
+//        if !isLoggedIn {
+//          LoginRegisterScreen()
+//            .transition(.move(edge: .bottom))
+//            .preferredColorScheme(isLightTheme ? .light : .dark)
+//        } else {
           HomeScreen()
             .transition(.move(edge: .bottom))
             .preferredColorScheme(isLightTheme ? .light : .dark)
+//        }
+        
+        if networkMonitor.connectionStatus == .unsatisfied {
+          SnackbarView(isDisplayed: .constant(true), message: "Not connected to internet", type: .error) {}
         }
       }
     }

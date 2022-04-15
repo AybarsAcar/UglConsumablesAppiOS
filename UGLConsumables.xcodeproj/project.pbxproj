@@ -58,6 +58,7 @@
 		00C656DF27A4BC0D00CD255A /* AreaOfWorkDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C656DE27A4BC0D00CD255A /* AreaOfWorkDto.swift */; };
 		00C656E227A4BFFD00CD255A /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C656E127A4BFFD00CD255A /* HomeViewModel.swift */; };
 		00C86B7528090E5B0088EF26 /* HalfSheetViewControllerRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C86B7428090E5B0088EF26 /* HalfSheetViewControllerRepresentable.swift */; };
+		00C86B7828091CC20088EF26 /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C86B7728091CC20088EF26 /* NetworkMonitor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -113,6 +114,7 @@
 		00C656DE27A4BC0D00CD255A /* AreaOfWorkDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaOfWorkDto.swift; sourceTree = "<group>"; };
 		00C656E127A4BFFD00CD255A /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		00C86B7428090E5B0088EF26 /* HalfSheetViewControllerRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HalfSheetViewControllerRepresentable.swift; sourceTree = "<group>"; };
+		00C86B7728091CC20088EF26 /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -223,6 +225,7 @@
 				00316694279BB855001EFFD6 /* Extensions */,
 				0031667E279BB387001EFFD6 /* Preview Content */,
 				00A25BAD279D2CC500DF553F /* Styles */,
+				00C86B7628091BCD0088EF26 /* Utils */,
 				0031668E279BB7C5001EFFD6 /* View */,
 			);
 			path = UGLConsumables;
@@ -308,13 +311,13 @@
 		007C0BFF27A0C1A900286E0E /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				00C86B7128090D010088EF26 /* HalfModal */,
+				002F7B6D27C765D1007BB7BB /* CircleButton.swift */,
 				00C20DE327A919B8002219FC /* DropdownPicker.swift */,
 				00B9A88B279EA10B00842850 /* SlidingTabView.swift */,
 				007C0C0027A0C20000286E0E /* SnackbarView.swift */,
 				00C656D527A48C3A00CD255A /* Camera */,
+				00C86B7128090D010088EF26 /* HalfModal */,
 				0015C13627A3E2D6006A7D7F /* TabBar */,
-				002F7B6D27C765D1007BB7BB /* CircleButton.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -406,6 +409,14 @@
 				00C86B7428090E5B0088EF26 /* HalfSheetViewControllerRepresentable.swift */,
 			);
 			path = HalfModal;
+			sourceTree = "<group>";
+		};
+		00C86B7628091BCD0088EF26 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				00C86B7728091CC20088EF26 /* NetworkMonitor.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -527,6 +538,7 @@
 				00C20DE627A922FD002219FC /* ConsumableService.swift in Sources */,
 				002F7B6E27C765D1007BB7BB /* CircleButton.swift in Sources */,
 				0082775F27CCBFA6007F184B /* MainAppState.swift in Sources */,
+				00C86B7828091CC20088EF26 /* NetworkMonitor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

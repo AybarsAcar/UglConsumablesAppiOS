@@ -43,7 +43,14 @@ struct ProfileView: View {
         .padding()
     }
     .halfSheet(isPresented: $showHalfModal) {
-      
+      ZStack {
+        
+        Text("Hello from half modal!")
+          .font(.system(size: 24, weight: .semibold, design: .serif))
+          .foregroundColor(.primary)
+      }
+      .frame(maxWidth: .infinity, maxHeight: .infinity)
+      .background(.ultraThinMaterial)
     }
   }
 }
