@@ -52,3 +52,14 @@ class CustomHostingController<Content: View>: UIHostingController<Content> {
     }
   }
 }
+
+// MARK: - View Extension
+
+extension View {
+  func halfSheet<SheetView: View>(isPresented: Binding<Bool>, @ViewBuilder sheetView: @escaping () -> SheetView) -> some View {
+    return self
+      .background(
+        HalfSheetHelper(sheetView: sheetView(), showSheet: isPresented)
+      )
+  }
+}

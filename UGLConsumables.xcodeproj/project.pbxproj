@@ -57,7 +57,6 @@
 		00C656DD27A4BB9700CD255A /* AreaOfWorkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C656DC27A4BB9700CD255A /* AreaOfWorkService.swift */; };
 		00C656DF27A4BC0D00CD255A /* AreaOfWorkDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C656DE27A4BC0D00CD255A /* AreaOfWorkDto.swift */; };
 		00C656E227A4BFFD00CD255A /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C656E127A4BFFD00CD255A /* HomeViewModel.swift */; };
-		00C86B7328090D8E0088EF26 /* HalfModelModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C86B7228090D8E0088EF26 /* HalfModelModifier.swift */; };
 		00C86B7528090E5B0088EF26 /* HalfSheetViewControllerRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C86B7428090E5B0088EF26 /* HalfSheetViewControllerRepresentable.swift */; };
 /* End PBXBuildFile section */
 
@@ -113,7 +112,6 @@
 		00C656DC27A4BB9700CD255A /* AreaOfWorkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaOfWorkService.swift; sourceTree = "<group>"; };
 		00C656DE27A4BC0D00CD255A /* AreaOfWorkDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaOfWorkDto.swift; sourceTree = "<group>"; };
 		00C656E127A4BFFD00CD255A /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
-		00C86B7228090D8E0088EF26 /* HalfModelModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HalfModelModifier.swift; sourceTree = "<group>"; };
 		00C86B7428090E5B0088EF26 /* HalfSheetViewControllerRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HalfSheetViewControllerRepresentable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -405,7 +403,6 @@
 		00C86B7128090D010088EF26 /* HalfModal */ = {
 			isa = PBXGroup;
 			children = (
-				00C86B7228090D8E0088EF26 /* HalfModelModifier.swift */,
 				00C86B7428090E5B0088EF26 /* HalfSheetViewControllerRepresentable.swift */,
 			);
 			path = HalfModal;
@@ -511,7 +508,6 @@
 				00C20DE827A92420002219FC /* ServiceOrderDetailedView.swift in Sources */,
 				007C0C0127A0C20000286E0E /* SnackbarView.swift in Sources */,
 				0015C13A27A3E4D3006A7D7F /* TabBarItemsPreferenceKey.swift in Sources */,
-				00C86B7328090D8E0088EF26 /* HalfModelModifier.swift in Sources */,
 				008CA0A0279FF32200EECF84 /* RegisterView.swift in Sources */,
 				00C20DE227A91664002219FC /* Consumable.swift in Sources */,
 				0015C14A27A3F19E006A7D7F /* SettingsView.swift in Sources */,
