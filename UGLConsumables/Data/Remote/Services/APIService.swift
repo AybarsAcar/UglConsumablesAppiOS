@@ -16,6 +16,8 @@ enum APIError: Error, LocalizedError {
   case corruptData
   case decodingError(String)
   case unauthorised
+  case notFound
+  case internalServerError
   
   var errorDescription: String? {
     switch self {
@@ -31,6 +33,10 @@ enum APIError: Error, LocalizedError {
       return string
     case .unauthorised:
       return NSLocalizedString("Invalid credentials", comment: "")
+    case .notFound:
+      return NSLocalizedString("404 Not Found", comment: "")
+    case .internalServerError:
+      return NSLocalizedString("Internal Server Error", comment: "")
     }
   }
 }

@@ -10,12 +10,19 @@ import Foundation
 
 struct ConsumableDto: Identifiable, Codable {
   let id: Int
-  let sapId: Int
+  let sapID: Int
   let description: String
   let unitOfMeasure: String
   let isPrd: Bool
   let quantity: Int
   let areaOfWorks: [AreaOfWorkDto]
+  
+  enum CodingKeys: String, CodingKey {
+    case id
+    case sapID = "sapId"
+    case description = "description"
+    case unitOfMeasure, isPrd, quantity, areaOfWorks
+  }
 }
 
 
@@ -33,7 +40,7 @@ extension ConsumableDto {
   func toConsumable() -> Consumable {
     return Consumable(
       id: self.id,
-      sapId: self.sapId,
+      sapID: self.sapID,
       description: self.description,
       unitOfMeasure: Consumable.UnitOfMeasure(rawValue: self.unitOfMeasure) ?? .each,
       isPrd: self.isPrd,

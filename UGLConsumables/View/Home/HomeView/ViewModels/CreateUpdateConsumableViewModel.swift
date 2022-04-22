@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 final class CreateUpdateConsumableViewModel: ObservableObject {
   
   @Published var sapId: String = ""

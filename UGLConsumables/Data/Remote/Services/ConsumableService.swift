@@ -7,12 +7,15 @@
 
 import Foundation
 
-
-class ConsumableService {
+final class ConsumableService {
   
   private let domain: String = "https://ugl-consumables.herokuapp.com/api"
   
-  private let token = "THIS TOKEN IS STORED IN DEVICE"
+  private let token: String?
+  
+  init() {
+    self.token = UserDefaults.standard.value(forKey: "token") as? String
+  }
   
   
   /// GET request to return all the Consumables by Sap Id
@@ -20,7 +23,7 @@ class ConsumableService {
   /// if no sapId is passed in it returns all the Consumable items in db
   func list(by sapId: Int) async throws -> [ConsumableDto] {
     
-    guard let url = URL(string: "\(domain)/Consumable?serviceOrderId=\(sapId)") else {
+    guard let url = URL(string: "\(domain)/Consumable?serviceOrderId=\(sapId)"), let token = token else {
       throw APIError.invalidURL
     }
     

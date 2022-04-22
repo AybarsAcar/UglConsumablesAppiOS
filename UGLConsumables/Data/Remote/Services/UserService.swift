@@ -7,11 +7,9 @@
 
 import Foundation
 
-
-class UserService: UserRepository {
+final class UserService: UserRepository {
   
   private let domain: String = "https://ugl-consumables.herokuapp.com/api"
-  
   
   func login(with loginDetails: LoginAccountDetails) async throws -> AccountDto {
     

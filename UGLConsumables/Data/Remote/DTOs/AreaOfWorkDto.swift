@@ -13,3 +13,9 @@ struct AreaOfWorkDto: Codable, Identifiable {
   let description: String
   let serviceOrder: Int
 }
+
+struct AreaOfWorkFormValues: Codable {
+  let description: String
+  let serviceOrder: Int
+  var consumables: [ConsumableDto] = []
+}

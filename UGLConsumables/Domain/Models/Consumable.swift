@@ -9,7 +9,7 @@ import Foundation
 
 struct Consumable: Identifiable, Codable {
   let id: Int
-  let sapId: Int
+  let sapID: Int
   let description: String
   let unitOfMeasure: UnitOfMeasure
   let isPrd: Bool

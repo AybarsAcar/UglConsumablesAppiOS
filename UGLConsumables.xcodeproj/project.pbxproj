@@ -42,6 +42,7 @@
 		008CA0AC279FFADF00EECF84 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008CA0AB279FFADF00EECF84 /* APIService.swift */; };
 		00A25BAF279D2CD500DF553F /* UGLButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A25BAE279D2CD500DF553F /* UGLButton.swift */; };
 		00A25BB1279D303900DF553F /* UIApplication+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A25BB0279D303900DF553F /* UIApplication+Extensions.swift */; };
+		00A2886228097C5800D278DE /* CreateUpdateAreaOfWorkViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A2886128097C5800D278DE /* CreateUpdateAreaOfWorkViewModel.swift */; };
 		00B9A88C279EA10B00842850 /* SlidingTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B9A88B279EA10B00842850 /* SlidingTabView.swift */; };
 		00B9A88F279EA4E300842850 /* UnderlinedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B9A88E279EA4E300842850 /* UnderlinedTextField.swift */; };
 		00C20DDE27A91284002219FC /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C20DDD27A91284002219FC /* ProfileHeaderView.swift */; };
@@ -99,6 +100,7 @@
 		008CA0AB279FFADF00EECF84 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		00A25BAE279D2CD500DF553F /* UGLButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UGLButton.swift; sourceTree = "<group>"; };
 		00A25BB0279D303900DF553F /* UIApplication+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extensions.swift"; sourceTree = "<group>"; };
+		00A2886128097C5800D278DE /* CreateUpdateAreaOfWorkViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUpdateAreaOfWorkViewModel.swift; sourceTree = "<group>"; };
 		00B9A88B279EA10B00842850 /* SlidingTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlidingTabView.swift; sourceTree = "<group>"; };
 		00B9A88E279EA4E300842850 /* UnderlinedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderlinedTextField.swift; sourceTree = "<group>"; };
 		00C20DDD27A91284002219FC /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
@@ -402,6 +404,7 @@
 				00C20DDF27A9153A002219FC /* CreateUpdateConsumableViewModel.swift */,
 				00C656E127A4BFFD00CD255A /* HomeViewModel.swift */,
 				00C20DE927A92455002219FC /* ServiceOrderDetailedViewModel.swift */,
+				00A2886128097C5800D278DE /* CreateUpdateAreaOfWorkViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -518,6 +521,7 @@
 				0015C14327A3E87E006A7D7F /* HomeView.swift in Sources */,
 				008CA0A8279FF95D00EECF84 /* UserService.swift in Sources */,
 				00C656DF27A4BC0D00CD255A /* AreaOfWorkDto.swift in Sources */,
+				00A2886228097C5800D278DE /* CreateUpdateAreaOfWorkViewModel.swift in Sources */,
 				00C656E227A4BFFD00CD255A /* HomeViewModel.swift in Sources */,
 				00C20DE827A92420002219FC /* ServiceOrderDetailedView.swift in Sources */,
 				00C86B7A280925170088EF26 /* ImagePicker.swift in Sources */,
