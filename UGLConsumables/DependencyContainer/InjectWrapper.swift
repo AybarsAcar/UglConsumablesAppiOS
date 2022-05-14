@@ -28,7 +28,7 @@ struct Inject<T> {
   }
 }
 
-func buildContainer() -> Container {
+fileprivate func buildContainer() -> Container {
   let container = Container()
   
   container.register(UserRepository.self) { _  in
@@ -53,4 +53,3 @@ func buildContainer() -> Container {
   
   return container
 }
-

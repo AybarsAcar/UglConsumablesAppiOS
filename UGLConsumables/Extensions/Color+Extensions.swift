@@ -19,4 +19,10 @@ struct AppColorTheme {
   let green = Color("Green")
   let blue = Color("Blue")
   let surface = Color("Surface")
+  
+  let button = ButtonColors()
+  
+  struct ButtonColors {
+    
+  }
 }
