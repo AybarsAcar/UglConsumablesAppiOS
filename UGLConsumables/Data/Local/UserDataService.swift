@@ -9,7 +9,7 @@ import Foundation
 import CoreData
 
 
-class UserDataService {
+class UserDataService: UserDataLocalRepository {
   
   @Published var userEntity: UserEntity? = nil
   

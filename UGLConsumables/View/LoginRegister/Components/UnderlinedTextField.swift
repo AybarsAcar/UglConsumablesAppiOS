@@ -49,9 +49,11 @@ struct UnderlinedTextField: View {
     switch type {
     case .plain:
       plainTextField
+        .frame(height: 60)
       
     case .secure:
      secureTextField
+        .frame(height: 60)
     }
   }
 }

@@ -44,6 +44,8 @@
 		00A25BAF279D2CD500DF553F /* UGLButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A25BAE279D2CD500DF553F /* UGLButton.swift */; };
 		00A25BB1279D303900DF553F /* UIApplication+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A25BB0279D303900DF553F /* UIApplication+Extensions.swift */; };
 		00A2886228097C5800D278DE /* CreateUpdateAreaOfWorkViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A2886128097C5800D278DE /* CreateUpdateAreaOfWorkViewModel.swift */; };
+		00AF69DA282FA47E00362529 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 00AF69D9282FA47E00362529 /* Swinject */; };
+		00AF69DC282FA52500362529 /* UserDataLocalRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AF69DB282FA52500362529 /* UserDataLocalRepository.swift */; };
 		00B9A88C279EA10B00842850 /* SlidingTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B9A88B279EA10B00842850 /* SlidingTabView.swift */; };
 		00B9A88F279EA4E300842850 /* UnderlinedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B9A88E279EA4E300842850 /* UnderlinedTextField.swift */; };
 		00C20DDE27A91284002219FC /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C20DDD27A91284002219FC /* ProfileHeaderView.swift */; };
@@ -62,6 +64,7 @@
 		00C86B7528090E5B0088EF26 /* HalfSheetViewControllerRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C86B7428090E5B0088EF26 /* HalfSheetViewControllerRepresentable.swift */; };
 		00C86B7828091CC20088EF26 /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C86B7728091CC20088EF26 /* NetworkMonitor.swift */; };
 		00C86B7A280925170088EF26 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C86B79280925170088EF26 /* ImagePicker.swift */; };
+		00E4AC58282FA1CC00CBB549 /* InjectWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E4AC57282FA1CC00CBB549 /* InjectWrapper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -103,6 +106,7 @@
 		00A25BAE279D2CD500DF553F /* UGLButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UGLButton.swift; sourceTree = "<group>"; };
 		00A25BB0279D303900DF553F /* UIApplication+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extensions.swift"; sourceTree = "<group>"; };
 		00A2886128097C5800D278DE /* CreateUpdateAreaOfWorkViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUpdateAreaOfWorkViewModel.swift; sourceTree = "<group>"; };
+		00AF69DB282FA52500362529 /* UserDataLocalRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataLocalRepository.swift; sourceTree = "<group>"; };
 		00B9A88B279EA10B00842850 /* SlidingTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlidingTabView.swift; sourceTree = "<group>"; };
 		00B9A88E279EA4E300842850 /* UnderlinedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderlinedTextField.swift; sourceTree = "<group>"; };
 		00C20DDD27A91284002219FC /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
@@ -121,6 +125,7 @@
 		00C86B7428090E5B0088EF26 /* HalfSheetViewControllerRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HalfSheetViewControllerRepresentable.swift; sourceTree = "<group>"; };
 		00C86B7728091CC20088EF26 /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
 		00C86B79280925170088EF26 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		00E4AC57282FA1CC00CBB549 /* InjectWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectWrapper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +133,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00AF69DA282FA47E00362529 /* Swinject in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -157,6 +163,7 @@
 		0015C12D27A3D560006A7D7F /* Local */ = {
 			isa = PBXGroup;
 			children = (
+				00AF69DB282FA52500362529 /* UserDataLocalRepository.swift */,
 				0015C13127A3D6CA006A7D7F /* UserDataService.swift */,
 				0015C12E27A3D5E9006A7D7F /* UGLConsumablesContainer.xcdatamodeld */,
 			);
@@ -227,6 +234,7 @@
 				00316678279BB386001EFFD6 /* UGLConsumablesApp.swift */,
 				0031667C279BB387001EFFD6 /* Assets.xcassets */,
 				0015C12C27A3D54F006A7D7F /* Data */,
+				00E4AC56282FA1A200CBB549 /* DependencyContainer */,
 				00316686279BB66E001EFFD6 /* Domain */,
 				00316694279BB855001EFFD6 /* Extensions */,
 				0031667E279BB387001EFFD6 /* Preview Content */,
@@ -428,6 +436,14 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		00E4AC56282FA1A200CBB549 /* DependencyContainer */ = {
+			isa = PBXGroup;
+			children = (
+				00E4AC57282FA1CC00CBB549 /* InjectWrapper.swift */,
+			);
+			path = DependencyContainer;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -444,6 +460,9 @@
 			dependencies = (
 			);
 			name = UGLConsumables;
+			packageProductDependencies = (
+				00AF69D9282FA47E00362529 /* Swinject */,
+			);
 			productName = UGLConsumables;
 			productReference = 00316675279BB386001EFFD6 /* UGLConsumables.app */;
 			productType = "com.apple.product-type.application";
@@ -472,6 +491,9 @@
 				Base,
 			);
 			mainGroup = 0031666C279BB385001EFFD6;
+			packageReferences = (
+				00AF69D8282FA47E00362529 /* XCRemoteSwiftPackageReference "Swinject" */,
+			);
 			productRefGroup = 00316676279BB386001EFFD6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -500,6 +522,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				008CA0AC279FFADF00EECF84 /* APIService.swift in Sources */,
+				00E4AC58282FA1CC00CBB549 /* InjectWrapper.swift in Sources */,
 				0015C14627A3EC5A006A7D7F /* ProfileView.swift in Sources */,
 				00316696279BB88D001EFFD6 /* Color+Extensions.swift in Sources */,
 				00C656D727A48CA000CD255A /* CameraView.swift in Sources */,
@@ -512,6 +535,7 @@
 				0015C13E27A3E5B6006A7D7F /* CustomTabBarContainerView.swift in Sources */,
 				0015C13227A3D6CA006A7D7F /* UserDataService.swift in Sources */,
 				00B9A88F279EA4E300842850 /* UnderlinedTextField.swift in Sources */,
+				00AF69DC282FA52500362529 /* UserDataLocalRepository.swift in Sources */,
 				0049802B279D296E00C43555 /* View+Extensions.swift in Sources */,
 				0015C14027A3E69A006A7D7F /* CustomTabBarView.swift in Sources */,
 				00C656D927A48D2E00CD255A /* CameraModel.swift in Sources */,
@@ -759,6 +783,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		00AF69D8282FA47E00362529 /* XCRemoteSwiftPackageReference "Swinject" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/Swinject.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		00AF69D9282FA47E00362529 /* Swinject */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 00AF69D8282FA47E00362529 /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = Swinject;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		0015C12E27A3D5E9006A7D7F /* UGLConsumablesContainer.xcdatamodeld */ = {

@@ -7,8 +7,7 @@
 
 import Foundation
 
-
-class RegisterViewModel: ObservableObject {
+final class RegisterViewModel: ObservableObject {
   
   @Published var username: String = ""
   @Published var email: String = ""
@@ -20,15 +19,8 @@ class RegisterViewModel: ObservableObject {
   @Published var showAlert: Bool = false
   @Published var errorMessage: String? = nil
   
-  
-  private let _service: UserRepository
-  private let _coreData: UserDataService
-  
-  init() {
-    _service = UserService()
-    _coreData = UserDataService()
-  }
-  
+  @Inject private var service: UserRepository
+  @Inject private var localDatabase: UserDataLocalRepository
   
   @MainActor
   func signUp() async {
@@ -52,7 +44,7 @@ class RegisterViewModel: ObservableObject {
     }
     
     do {
-      account = try await _service.signUp(with: RegisterAccountDetails(username: username, email: email, password: password))
+      account = try await service.signUp(with: RegisterAccountDetails(username: username, email: email, password: password))
       
       // clear the form values
       username = ""
@@ -68,7 +60,7 @@ class RegisterViewModel: ObservableObject {
       
       // save the user in local device db
       if let user = account?.toUser() {
-        _coreData.update(user: user)
+        localDatabase.update(user: user)
       }
       
     } catch {

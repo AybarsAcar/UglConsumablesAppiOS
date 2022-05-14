@@ -5,7 +5,6 @@
 //  Created by Aybars Acar on 25/1/2022.
 //
 
-import Foundation
 import SwiftUI
 
 final class LoginViewModel: ObservableObject {
@@ -18,14 +17,9 @@ final class LoginViewModel: ObservableObject {
   @Published var showAlert: Bool = false
   @Published var errorMessage: String? = nil
   
-  private let _service: UserRepository
-  private let _coreData: UserDataService
-  
-  init() {
-    _service = UserService()
-    _coreData = UserDataService()
-  }
-  
+  // Dependencies
+  @Inject private var service: UserRepository
+  @Inject private var localDatabase: UserDataLocalRepository
   
   @MainActor
   func login() async {
@@ -45,7 +39,7 @@ final class LoginViewModel: ObservableObject {
     
     do {
       try await Task.sleep(nanoseconds: 2_000_000_000) // add 2 second delay
-      account = try await _service.login(with: LoginAccountDetails(email: email, password: password))
+      account = try await service.login(with: LoginAccountDetails(email: email, password: password))
       
       // clear the form values
       email = ""
@@ -59,7 +53,7 @@ final class LoginViewModel: ObservableObject {
       
       // save the user in local device db
       if let user = account?.toUser() {
-        _coreData.update(user: user)
+        localDatabase.update(user: user)
       }
       
     } catch {
