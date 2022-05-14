@@ -19,6 +19,7 @@
 		0015C14627A3EC5A006A7D7F /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0015C14527A3EC5A006A7D7F /* ProfileView.swift */; };
 		0015C14A27A3F19E006A7D7F /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0015C14927A3F19E006A7D7F /* SettingsView.swift */; };
 		0015C14C27A3F3FD006A7D7F /* CreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0015C14B27A3F3FD006A7D7F /* CreateView.swift */; };
+		001E44122812C3AF0084ED20 /* HapticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001E44112812C3AF0084ED20 /* HapticsManager.swift */; };
 		002F7B6E27C765D1007BB7BB /* CircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002F7B6D27C765D1007BB7BB /* CircleButton.swift */; };
 		00316679279BB386001EFFD6 /* UGLConsumablesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00316678279BB386001EFFD6 /* UGLConsumablesApp.swift */; };
 		0031667D279BB387001EFFD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0031667C279BB387001EFFD6 /* Assets.xcassets */; };
@@ -76,6 +77,7 @@
 		0015C14527A3EC5A006A7D7F /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		0015C14927A3F19E006A7D7F /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		0015C14B27A3F3FD006A7D7F /* CreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateView.swift; sourceTree = "<group>"; };
+		001E44112812C3AF0084ED20 /* HapticsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticsManager.swift; sourceTree = "<group>"; };
 		002F7B6D27C765D1007BB7BB /* CircleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButton.swift; sourceTree = "<group>"; };
 		00316675279BB386001EFFD6 /* UGLConsumables.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UGLConsumables.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00316678279BB386001EFFD6 /* UGLConsumablesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UGLConsumablesApp.swift; sourceTree = "<group>"; };
@@ -421,6 +423,7 @@
 			isa = PBXGroup;
 			children = (
 				00C86B7728091CC20088EF26 /* NetworkMonitor.swift */,
+				001E44112812C3AF0084ED20 /* HapticsManager.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -518,6 +521,7 @@
 				0015C14C27A3F3FD006A7D7F /* CreateView.swift in Sources */,
 				00C20DEA27A92455002219FC /* ServiceOrderDetailedViewModel.swift in Sources */,
 				008CA0A4279FF85A00EECF84 /* RegisterViewModel.swift in Sources */,
+				001E44122812C3AF0084ED20 /* HapticsManager.swift in Sources */,
 				0015C14327A3E87E006A7D7F /* HomeView.swift in Sources */,
 				008CA0A8279FF95D00EECF84 /* UserService.swift in Sources */,
 				00C656DF27A4BC0D00CD255A /* AreaOfWorkDto.swift in Sources */,

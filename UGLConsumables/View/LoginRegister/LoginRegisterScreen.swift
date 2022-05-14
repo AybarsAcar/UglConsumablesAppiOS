@@ -7,7 +7,6 @@
 
 import SwiftUI
 
-
 struct LoginRegisterScreen: View {
   
   @Environment(\.colorScheme) var colorScheme
@@ -32,19 +31,12 @@ struct LoginRegisterScreen: View {
           .ignoresSafeArea()
       }
       
-      
       VStack {
         HStack {
           Spacer()
-          Button(action: {
-            isLightTheme.toggle()
-          }) {
-            Image(systemName: isLightTheme ? "sun.min.fill" : "moon.fill")
-              .font(.title)
-              .foregroundColor(.white)
-              .padding()
-          }
+          CircleButton(isLightTheme: $isLightTheme)
         }
+        .padding()
         
         Spacer()
         
@@ -54,7 +46,6 @@ struct LoginRegisterScreen: View {
           .foregroundColor(.white)
           .scaledToFit()
           .frame(width: 200, height: 200)
-        
         
         loginCard
           .padding()
@@ -96,8 +87,6 @@ struct LoginRegisterScreen: View {
   }
 }
 
-
-
 struct LoginRegisterView_Previews: PreviewProvider {
   static var previews: some View {
     ZStack {
@@ -105,7 +94,6 @@ struct LoginRegisterView_Previews: PreviewProvider {
     }
   }
 }
-
 
 extension LoginRegisterScreen {
   
