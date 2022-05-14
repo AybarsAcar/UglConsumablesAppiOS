@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 final class HomeViewModel: ObservableObject {
   
   @Published var areaOfWorkDtos: [AreaOfWorkDto] = []
@@ -16,13 +15,7 @@ final class HomeViewModel: ObservableObject {
   @Published var showAlert: Bool = false
   @Published var errorMessage: String? = nil
   
-  
-  private let _service: AreaOfWorkService
-  
-  init() {
-    _service = AreaOfWorkService()
-  }
-  
+  @Inject private var service: AreaOfWorkRepository
   
   @MainActor
   func list() async {
@@ -36,7 +29,7 @@ final class HomeViewModel: ObservableObject {
     do {
       try await Task.sleep(nanoseconds: 2_000_000_000) // add 2 second delay
       
-      areaOfWorkDtos = try await _service.list()
+      areaOfWorkDtos = try await service.list()
       
     } catch {
       print("ERROR\n\(error.localizedDescription)")

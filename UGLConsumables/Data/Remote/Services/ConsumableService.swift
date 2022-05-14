@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class ConsumableService {
+final class ConsumableService: ConsumableRepository {
   
   private let domain: String = "https://ugl-consumables.herokuapp.com/api"
   

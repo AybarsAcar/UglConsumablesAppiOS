@@ -7,11 +7,11 @@
 
 import Foundation
 
-final class AreaOfWorkService {
+final class AreaOfWorkService: AreaOfWorkRepository {
   
   private let domain: String = "https://ugl-consumables.herokuapp.com/api"
   
-  private let token: String?
+  private var token: String?
   
   init() {
     token = UserDefaults.standard.value(forKey: "token") as? String

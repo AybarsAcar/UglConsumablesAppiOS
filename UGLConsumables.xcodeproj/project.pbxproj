@@ -46,6 +46,8 @@
 		00A2886228097C5800D278DE /* CreateUpdateAreaOfWorkViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A2886128097C5800D278DE /* CreateUpdateAreaOfWorkViewModel.swift */; };
 		00AF69DA282FA47E00362529 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 00AF69D9282FA47E00362529 /* Swinject */; };
 		00AF69DC282FA52500362529 /* UserDataLocalRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AF69DB282FA52500362529 /* UserDataLocalRepository.swift */; };
+		00AF69DE282FA6F100362529 /* AreaOfWorkRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AF69DD282FA6F100362529 /* AreaOfWorkRepository.swift */; };
+		00AF69E0282FA6FB00362529 /* ConsumableRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AF69DF282FA6FB00362529 /* ConsumableRepository.swift */; };
 		00B9A88C279EA10B00842850 /* SlidingTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B9A88B279EA10B00842850 /* SlidingTabView.swift */; };
 		00B9A88F279EA4E300842850 /* UnderlinedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B9A88E279EA4E300842850 /* UnderlinedTextField.swift */; };
 		00C20DDE27A91284002219FC /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C20DDD27A91284002219FC /* ProfileHeaderView.swift */; };
@@ -107,6 +109,8 @@
 		00A25BB0279D303900DF553F /* UIApplication+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extensions.swift"; sourceTree = "<group>"; };
 		00A2886128097C5800D278DE /* CreateUpdateAreaOfWorkViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUpdateAreaOfWorkViewModel.swift; sourceTree = "<group>"; };
 		00AF69DB282FA52500362529 /* UserDataLocalRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataLocalRepository.swift; sourceTree = "<group>"; };
+		00AF69DD282FA6F100362529 /* AreaOfWorkRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaOfWorkRepository.swift; sourceTree = "<group>"; };
+		00AF69DF282FA6FB00362529 /* ConsumableRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsumableRepository.swift; sourceTree = "<group>"; };
 		00B9A88B279EA10B00842850 /* SlidingTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlidingTabView.swift; sourceTree = "<group>"; };
 		00B9A88E279EA4E300842850 /* UnderlinedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderlinedTextField.swift; sourceTree = "<group>"; };
 		00C20DDD27A91284002219FC /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
@@ -367,6 +371,8 @@
 			isa = PBXGroup;
 			children = (
 				008CA0A9279FF97000EECF84 /* UserRepository.swift */,
+				00AF69DD282FA6F100362529 /* AreaOfWorkRepository.swift */,
+				00AF69DF282FA6FB00362529 /* ConsumableRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -559,11 +565,13 @@
 				00C20DE227A91664002219FC /* Consumable.swift in Sources */,
 				0015C14A27A3F19E006A7D7F /* SettingsView.swift in Sources */,
 				00C656DB27A492EC00CD255A /* CameraPreview.swift in Sources */,
+				00AF69E0282FA6FB00362529 /* ConsumableRepository.swift in Sources */,
 				0015C12B27A3D4D4006A7D7F /* HomeScreen.swift in Sources */,
 				00C20DE027A9153A002219FC /* CreateUpdateConsumableViewModel.swift in Sources */,
 				00C86B7528090E5B0088EF26 /* HalfSheetViewControllerRepresentable.swift in Sources */,
 				0015C13527A3DE7D006A7D7F /* ProfileViewModel.swift in Sources */,
 				00316693279BB7FA001EFFD6 /* LoginRegisterScreen.swift in Sources */,
+				00AF69DE282FA6F100362529 /* AreaOfWorkRepository.swift in Sources */,
 				008CA0AA279FF97000EECF84 /* UserRepository.swift in Sources */,
 				00C20DDE27A91284002219FC /* ProfileHeaderView.swift in Sources */,
 				00B9A88C279EA10B00842850 /* SlidingTabView.swift in Sources */,

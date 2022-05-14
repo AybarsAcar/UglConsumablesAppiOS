@@ -15,7 +15,7 @@ struct ServiceOrderDetailedView: View {
   
   init(areaOfWork: AreaOfWorkDto) {
     self.areaOfWork = areaOfWork
-    self._viewModel = StateObject.init(wrappedValue: ServiceOrderDetailedViewModel(sapId: areaOfWork.serviceOrder))
+    self._viewModel = StateObject.init(wrappedValue: ServiceOrderDetailedViewModel(sapID: areaOfWork.serviceOrder))
   }
   
   var body: some View {

@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 final class ServiceOrderDetailedViewModel: ObservableObject {
   
   @Published var consumables: [ConsumableDto] = []
@@ -16,14 +15,12 @@ final class ServiceOrderDetailedViewModel: ObservableObject {
   @Published var showAlert: Bool = false
   @Published var errorMessage: String? = nil
   
-  let sapId: Int
+  let sapID: Int
   
-  private let _service: ConsumableService
-
+  @Inject private var service: ConsumableRepository
   
-  init(sapId: Int) {
-    _service = ConsumableService()
-    self.sapId = sapId
+  init(sapID: Int) {
+    self.sapID = sapID
     
     Task {
       await list()
@@ -42,7 +39,7 @@ final class ServiceOrderDetailedViewModel: ObservableObject {
     do {
       try await Task.sleep(nanoseconds: 2_000_000_000) // add 2 second delay
       
-      consumables = try await _service.list(by: self.sapId)
+      consumables = try await service.list(by: self.sapID)
       
     } catch {
       print("ERROR\n\(error.localizedDescription)")

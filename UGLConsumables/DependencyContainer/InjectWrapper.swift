@@ -41,6 +41,16 @@ func buildContainer() -> Container {
   }
   .inObjectScope(.container)
   
+  container.register(ConsumableRepository.self) { _ in
+    return ConsumableService()
+  }
+  .inObjectScope(.container)
+  
+  container.register(AreaOfWorkRepository.self) { _ in
+    return AreaOfWorkService()
+  }
+  .inObjectScope(.container)
+  
   return container
 }
 

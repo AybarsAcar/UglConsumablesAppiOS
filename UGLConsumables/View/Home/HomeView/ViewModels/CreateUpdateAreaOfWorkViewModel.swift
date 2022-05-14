@@ -15,11 +15,7 @@ final class CreateUpdateAreaOfWorkViewModel: ObservableObject {
   @Published private(set) var success: Bool = false
   @Published private(set) var errorMessage: String? = nil
 
-  private let _service: AreaOfWorkService
-  
-  init() {
-    _service = AreaOfWorkService()
-  }
+  @Inject private var service: AreaOfWorkRepository
   
   @MainActor
   func create() async -> Bool {
@@ -35,7 +31,7 @@ final class CreateUpdateAreaOfWorkViewModel: ObservableObject {
     
     do {
       try await Task.sleep(nanoseconds: 2_000_000_000) // add 2 second delay
-      success = try await _service.create(with: AreaOfWorkFormValues(description: description, serviceOrder: serviceOrderID))
+      success = try await service.create(with: AreaOfWorkFormValues(description: description, serviceOrder: serviceOrderID))
       
       // clear the form values
       serviceOrder = ""
