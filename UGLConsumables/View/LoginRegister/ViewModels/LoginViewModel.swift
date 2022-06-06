@@ -46,9 +46,11 @@ final class LoginViewModel: ObservableObject {
       password = ""
       
       // save the user token to UserDefaults
-      if let token = account?.token {
-        UserDefaults.standard.set(token, forKey: "token")
-        UserDefaults.standard.set(true, forKey: "isLoggedIn")
+      withAnimation {
+        if let token = account?.token {
+          UserDefaults.standard.set(token, forKey: "token")
+          UserDefaults.standard.set(true, forKey: "isLoggedIn")
+        }
       }
       
       // save the user in local device db

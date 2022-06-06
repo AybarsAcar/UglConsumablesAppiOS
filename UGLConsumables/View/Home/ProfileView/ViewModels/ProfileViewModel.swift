@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 
 class ProfileViewModel: ObservableObject {
@@ -18,8 +19,10 @@ class ProfileViewModel: ObservableObject {
   
   
   func logout() {
-    UserDefaults.standard.set(false, forKey: "isLoggedIn")
-    UserDefaults.standard.removeObject(forKey: "token")
+    withAnimation {
+      UserDefaults.standard.set(false, forKey: "isLoggedIn")
+      UserDefaults.standard.removeObject(forKey: "token")
+    }
     
     _coreData.deleteUser()
   }

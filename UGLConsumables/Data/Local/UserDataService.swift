@@ -8,18 +8,17 @@
 import Foundation
 import CoreData
 
-
-class UserDataService: UserDataLocalRepository {
+final class UserDataService: UserDataLocalRepository {
   
   @Published var userEntity: UserEntity? = nil
   
-  private let _container: NSPersistentContainer
-  private let _containerName: String = "UGLConsumablesContainer"
-  private let _entityName: String = "UserEntity"
+  private let container: NSPersistentContainer
+  private let containerName: String = "UGLConsumablesContainer"
+  private let entityName: String = "UserEntity"
   
   init() {
-    _container = NSPersistentContainer(name: _containerName)
-    _container.loadPersistentStores { _, error in
+    container = NSPersistentContainer(name: containerName)
+    container.loadPersistentStores { _, error in
       if let error = error {
         print("Error loaading Core Data:\n\(error)")
       }
@@ -29,19 +28,17 @@ class UserDataService: UserDataLocalRepository {
     }
   }
   
-  
   /// returns the user stored in CoreData
   func getUser() {
-    let request = NSFetchRequest<UserEntity>(entityName: _entityName)
+    let request = NSFetchRequest<UserEntity>(entityName: entityName)
     
     do {
-      userEntity = try _container.viewContext.fetch(request).first
+      userEntity = try container.viewContext.fetch(request).first
       
     } catch {
       print("Error fetching the user:\n\(error)")
     }
   }
-  
   
   /// updates the user saved in CoreData if the user exists
   /// if the user does not exists creates a new user
@@ -58,20 +55,18 @@ class UserDataService: UserDataLocalRepository {
     }
   }
   
-  
   /// removes the currently logged in user details from CoreData
   /// called when the user logs out
   func deleteUser() {
     if let userEntity = userEntity {
-      _container.viewContext.delete(userEntity)
+      container.viewContext.delete(userEntity)
       save()
     }
   }
   
-  
   private func create(user: User) {
     
-    let entity = UserEntity(context: _container.viewContext)
+    let entity = UserEntity(context: container.viewContext)
     
     // map the values
     entity.username = user.username
@@ -81,11 +76,10 @@ class UserDataService: UserDataLocalRepository {
     applyChanges()
   }
   
-  
   private func save() {
     
     do {
-      try _container.viewContext.save()
+      try container.viewContext.save()
     } catch {
       print("Error saving changes to Core Data:\n\(error)")
     }
